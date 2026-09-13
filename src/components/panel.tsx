@@ -70,17 +70,16 @@ export function Panel({
         {piece.metrics && piece.metrics.length > 0 && (
           <dl className="mt-2 flex flex-wrap gap-x-10 gap-y-4">
             {piece.metrics.slice(0, 3).map((m) => (
-              <div key={m.label}>
-                <dt className="sr-only">{m.label}</dt>
-                <dd>
-                  <span className="display text-2xl text-accent">
-                    {m.prefix}
-                    {m.value}
-                    {m.suffix}
-                  </span>
-                  <span className="mt-1 block max-w-[18ch] text-xs leading-snug text-ink-faint">
-                    {m.label}
-                  </span>
+              /* Reversed so the number reads first while the markup keeps
+                 the valid dt-then-dd order. */
+              <div key={m.label} className="flex flex-col-reverse gap-1">
+                <dt className="max-w-[18ch] text-xs leading-snug text-ink-faint">
+                  {m.label}
+                </dt>
+                <dd className="display text-2xl text-accent">
+                  {m.prefix}
+                  {m.value}
+                  {m.suffix}
                 </dd>
               </div>
             ))}
