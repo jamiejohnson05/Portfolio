@@ -2,99 +2,112 @@
 
 /*
  * ─────────────────────────────────────────────────────────────
- *  DESIGN TOKENS
+ *  DESIGN TOKENS — "Full Bleed"
  *
- *  Change the accent color here and it updates everywhere on the
- *  site — buttons, links, filter chips, metric numbers.
- *  Try a few. Good options: a deep teal (#0F5257), an ink blue
- *  (#1E3A5F), a plum (#5B2A47), or leave the warm rust below.
+ *  This site commits to a dark palette. That's a deliberate
+ *  choice, not an oversight: big imagery on a dark ground is
+ *  what makes the layout work, and a light mode would dilute it.
+ *
+ *  To retune it, change these values and everything follows.
+ *  The accent (--accent) is the warm sand used for kickers,
+ *  links, and metric numbers — that's the one to make yours.
+ *
+ *  Want a light site instead? Swap --ground/--ink and lighten
+ *  --raised and --rule. Everything is token-driven, so it's a
+ *  six-line change rather than a rebuild.
  * ─────────────────────────────────────────────────────────────
  */
 
 :root {
-  /* Typefaces. See the note at the top of src/app/layout.tsx to swap
-     these for Google Fonts. */
-  --font-sans-stack: ui-sans-serif, system-ui, -apple-system,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-display-stack: ui-serif, Georgia, Cambria, "Times New Roman",
-    Times, serif;
+  --ground: #121213;
+  --raised: #1a1a1c;
+  --rule: #2b2b2e;
+  --rule-soft: #212123;
 
-  --paper: #fbfaf8;
-  --paper-raised: #ffffff;
-  --ink: #191714;
-  --ink-muted: #6b6459;
-  --rule: #e7e2da;
+  --ink: #f4f2ee;
+  --ink-muted: #a8a49c;
+  --ink-faint: #6e6b66;
 
-  /* ← the accent. */
-  --accent: #b4541f;
-  --accent-soft: #f4e4d9;
-}
+  --accent: #d9c8a9;
+  --accent-deep: #b3a183;
+  --accent-bg: #241f17;
 
-:root[data-theme="dark"] {
-  --paper: #121110;
-  --paper-raised: #1b1a18;
-  --ink: #f2efe9;
-  --ink-muted: #a09889;
-  --rule: #2e2c28;
-  --accent: #e88b4e;
-  --accent-soft: #3a2418;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --paper: #121110;
-    --paper-raised: #1b1a18;
-    --ink: #f2efe9;
-    --ink-muted: #a09889;
-    --rule: #2e2c28;
-    --accent: #e88b4e;
-    --accent-soft: #3a2418;
-  }
+  --font-display: "Anton", "Arial Narrow", Impact, sans-serif;
+  --font-body: "Manrope", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
 }
 
 @theme inline {
-  --color-paper: var(--paper);
-  --color-paper-raised: var(--paper-raised);
+  --color-ground: var(--ground);
+  --color-raised: var(--raised);
+  --color-rule: var(--rule);
+  --color-rule-soft: var(--rule-soft);
   --color-ink: var(--ink);
   --color-ink-muted: var(--ink-muted);
-  --color-rule: var(--rule);
+  --color-ink-faint: var(--ink-faint);
   --color-accent: var(--accent);
-  --color-accent-soft: var(--accent-soft);
+  --color-accent-deep: var(--accent-deep);
+  --color-accent-bg: var(--accent-bg);
 
-  --font-sans: var(--font-sans-stack);
-  --font-display: var(--font-display-stack);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-mono);
 }
 
 html {
   scroll-behavior: smooth;
-  color-scheme: light dark;
+  color-scheme: dark;
+  background-color: var(--ground);
 }
 
 body {
-  background-color: var(--paper);
+  background-color: var(--ground);
   color: var(--ink);
-  font-family: var(--font-sans-stack);
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
   background-color: var(--accent);
-  color: var(--paper);
+  color: var(--ground);
 }
 
-/* Focus ring that stays visible in both themes. */
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
   border-radius: 2px;
 }
 
-/* Scroll-reveal. Elements start slightly offset and settle in. */
+/*
+ * Display type. Anton is a single heavy weight designed for
+ * uppercase setting — it needs a little positive tracking at
+ * large sizes and tight leading to hold together.
+ */
+.display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.005em;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+/* Small uppercase labels — the kickers above every headline. */
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Scroll-reveal. */
 @keyframes reveal-in {
   from {
     opacity: 0;
-    transform: translateY(14px);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
@@ -107,7 +120,7 @@ body {
 }
 
 .reveal[data-visible="true"] {
-  animation: reveal-in 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: reveal-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 @media (prefers-reduced-motion: reduce) {

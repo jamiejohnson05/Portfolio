@@ -8,23 +8,19 @@ import { SiteFooter } from "@/components/site-footer";
  * ─────────────────────────────────────────────────────────────
  *  TYPEFACES
  *
- *  This site uses system fonts by default: they load instantly,
- *  never flash, and require no network at build time. Georgia
- *  (the display serif) is a genuinely good-looking face and is
- *  present on every Mac and Windows machine.
+ *  Anton for display (the big uppercase headlines), Manrope for
+ *  body, JetBrains Mono for the small uppercase kickers.
  *
- *  Want something more distinctive? Ask Claude to "switch the
- *  portfolio to Google Fonts", or do it yourself in three steps:
+ *  These load from Google Fonts via a <link> rather than
+ *  next/font. That keeps the build working on any network. If you
+ *  want them self-hosted for a slightly faster first paint, ask
+ *  Claude to "switch the fonts to next/font/google" — it's a
+ *  ten-line change and Vercel handles the rest.
  *
- *    1. Add at the top of this file:
- *         import { Inter, Instrument_Serif } from "next/font/google";
- *         const sans = Inter({ variable: "--font-sans-stack", subsets: ["latin"], display: "swap" });
- *         const display = Instrument_Serif({ variable: "--font-display-stack", subsets: ["latin"], weight: "400", display: "swap" });
- *    2. Add `${sans.variable} ${display.variable}` to the <html> className below.
- *    3. Delete the two --font-*-stack lines from src/app/globals.css.
- *
- *  Good display pairings to try: Instrument Serif, Fraunces,
- *  Playfair Display, Bricolage Grotesque.
+ *  Changing the display face changes the whole personality of the
+ *  site. Anton is heavy and condensed; if you want something less
+ *  shouty, try Archivo Black, Bebas Neue, or Oswald, and update
+ *  --font-display in globals.css to match.
  * ─────────────────────────────────────────────────────────────
  */
 
@@ -41,30 +37,33 @@ export const metadata: Metadata = {
     type: "website",
     images: ["/og-default.jpg"],
   },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
-
-/** Runs before paint so the page never flashes the wrong theme. */
-const themeScript = `
-(function () {
-  try {
-    var stored = localStorage.getItem("theme");
-    if (stored === "light" || stored === "dark") {
-      document.documentElement.setAttribute("data-theme", stored);
-    }
-  } catch (e) {}
-})();
-`;
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className="h-full" suppressHydrationWarning>
+    <html lang="en" className="h-full">
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        {/* The rule below is about the old Pages Router. This link lives in
+            the root layout, so it applies to every page. */}
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        />
       </head>
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-ground text-ink">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-accent focus:px-4 focus:py-2 focus:text-paper"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-accent focus:px-4 focus:py-2 focus:text-ground"
         >
           Skip to content
         </a>

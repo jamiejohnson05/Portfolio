@@ -1,7 +1,7 @@
 import { profile } from "./profile";
 
 /**
- * Site-wide settings: navigation, SEO metadata, and the accent color.
+ * Site-wide settings: navigation, SEO metadata, and the canonical URL.
  */
 export const site = {
   /** Shown in the browser tab and in link previews. */
@@ -16,8 +16,8 @@ export const site = {
    */
   url: "https://example.vercel.app",
 
-  /** The small mark in the top-left. Your initials work well. */
-  logoText: "JJ",
+  /** The wordmark in the top-left. Your name, or your initials. */
+  logoText: "Jamie Johnson",
 
   nav: [
     { label: "Work", href: "/work" },
@@ -25,13 +25,3 @@ export const site = {
     { label: "Contact", href: "/contact" },
   ],
 };
-
-/**
- * Human-readable labels for the work filters.
- * The keys must match `Discipline` in src/lib/types.ts.
- */
-export const disciplineLabels = {
-  brand: "Brand & Content",
-  growth: "Growth & Performance",
-  product: "Product Marketing",
-} as const;

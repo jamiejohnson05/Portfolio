@@ -54,12 +54,12 @@ export function Metric({ metric }: { metric: MetricType }) {
 
   return (
     <div ref={ref}>
-      <div className="font-display text-4xl leading-none tracking-tight text-accent sm:text-5xl">
+      <div className="display text-4xl text-accent sm:text-5xl">
         {metric.prefix}
         {display}
         {metric.suffix}
       </div>
-      <div className="mt-2 text-sm leading-snug text-ink-muted">
+      <div className="mt-2 max-w-[22ch] text-sm leading-snug text-ink-faint">
         {metric.label}
       </div>
     </div>

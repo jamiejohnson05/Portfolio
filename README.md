@@ -1,8 +1,8 @@
-# Jamie Johnson — Marketing Portfolio
+# Jamie Johnson — Portfolio
 
-An interactive portfolio site for brand, growth, and product marketing work.
-Built with Next.js 16, React 19, Tailwind CSS v4, and TypeScript. Deployed on
-Vercel, auto-deploying from `main`.
+Brand, campaign, print, and digital work across thirteen disciplines.
+Next.js 16, React 19, Tailwind CSS v4, TypeScript. Deployed on Vercel,
+auto-deploying from `main`.
 
 **→ [START-HERE.md](./START-HERE.md) — read this first.**
 
@@ -17,33 +17,40 @@ npm run dev     # http://localhost:3000
 
 ## Editing content
 
-All copy, projects, and links live in `src/content/`. Nothing else normally
-needs touching.
+All copy and projects live in `src/content/`:
 
-- `profile.ts` — you: bio, experience, skills, contact
-- `case-studies.ts` — the work
+- `work.ts` — every project
+- `categories.ts` — the thirteen disciplines
+- `profile.ts` — bio, experience, education, skills, contact
 - `testimonials.ts` — quotes (empty array hides the section)
 - `site.ts` — title, nav, canonical URL
 
-See [CONTENT-GUIDE.md](./CONTENT-GUIDE.md) for how to write a case study, image
-sizing, and what's safe to publish from past employers.
+See [CONTENT-GUIDE.md](./CONTENT-GUIDE.md) for how to write a piece, image
+specs, and what's safe to publish from past clients.
+
+## Design direction
+
+"Full Bleed" — dark ground, Anton display type, featured projects as
+alternating full-width panels, a page per category. Tokens live at the top of
+`src/app/globals.css`.
 
 ## Features
 
-- Case study pages generated from data — add an object, get a page
-- Filterable work grid by discipline (brand / growth / product)
-- Headline metrics that count up on scroll
-- Full-screen image lightbox with keyboard navigation
-- Light and dark themes, following the visitor's system setting
-- Fully static output — every page pre-rendered at build time
-- Responsive down to 375px, reduced-motion aware, keyboard navigable
+- Two page shapes per piece: object page, or full case study — set by whether
+  `sections` is present
+- Filterable archive grouped by Design / Marketing / Print & Promo
+- A static page per category, generated from the work in it
+- Headline metrics that count up on scroll, SSR-correct without JavaScript
+- Full-screen lightbox with keyboard navigation
+- Every page pre-rendered as static HTML
+- Responsive to 375px, reduced-motion aware, keyboard navigable
 
 ## Scripts
 
 | Command | Does |
 | --- | --- |
 | `npm run dev` | Local dev server with hot reload |
-| `npm run build` | Production build — run this before pushing |
+| `npm run build` | Production build — run before pushing |
 | `npm run start` | Serve the production build locally |
 | `npm run lint` | ESLint |
 

@@ -2,47 +2,59 @@ import type { Role, SkillGroup } from "@/lib/types";
 
 /**
  * ─────────────────────────────────────────────────────────────
- *  START HERE. This is you.
- *  Everything marked TODO is placeholder text that will appear
- *  on the live site until you replace it.
+ *  YOU.
+ *
+ *  Pre-filled from your résumé. Anything marked TODO is a
+ *  placeholder that will show on the live site until you write
+ *  over it — those are the bits only you can supply.
  * ─────────────────────────────────────────────────────────────
  */
 
 export const profile = {
   name: "Jamie Johnson",
 
-  /** Appears under your name in the hero. Keep it under ~8 words. */
-  title: "Marketing Strategist",
+  /** Under your name in the hero. Keep it short. */
+  title: "Digital Marketing & Graphic Design",
 
   /**
-   * The one-liner an employer reads in three seconds. Say what you do
-   * and who you do it for. Avoid "passionate" and "results-driven".
+   * The line an employer reads in three seconds, straight off your
+   * résumé link. Say what you do and what makes you different —
+   * for you that's the design-plus-execution combination, and the
+   * AI-assisted build workflow, which most designers still don't have.
    */
   tagline:
-    "TODO — Brand, growth, and product marketing for companies that need their story and their numbers to line up.",
+    "Nine years of strategy, design, and storytelling — brands, campaigns, and the digital experiences that carry them. I take work from concept through production, and I build what I design.",
 
   /**
    * Two or three short paragraphs for the About page. Write like you
-   * talk. This is where personality is allowed.
+   * talk. TODO — the draft below is a starting point from your résumé;
+   * rewrite it in your voice.
    */
   bio: [
-    "TODO — Open with what you actually do and the kind of problem you like being handed. One or two sentences.",
-    "TODO — Middle paragraph: your range. Brand work and performance work, or wherever your center of gravity is. Name a couple of real things you've shipped.",
-    "TODO — Close with what you're looking for next, and something human. A sentence is plenty.",
+    "TODO — I'm a digital marketing specialist and graphic designer with nine years of combining strategy, design, technology, and storytelling. Most of my work lives where those overlap: a brand that needs a mark and a launch plan, a campaign that needs to work on a wall and in an inbox.",
+    "TODO — Add the part your résumé can't say. What kind of problem do you actually like being handed? What's the project you'd want to talk about in an interview?",
+    "TODO — Close with what you're looking for next, and one human sentence. Studio Art degree, 3D emphasis, University of Arizona — worth mentioning if it explains how you think about objects like medals.",
   ],
 
-  /** Shown on the About page next to your bio. Optional but nice. */
+  /** Shown on the About page. Drop a photo at public/images/portrait.jpg. */
   portrait: {
     src: "/images/portrait.jpg",
-    alt: "TODO — Portrait of Jamie",
+    alt: "TODO — Portrait of Jamie Johnson",
   },
 
-  location: "TODO — City, State",
+  location: "Frederick, CO",
 
   /** Used for the contact links and the mailto: button. */
-  email: "TODO@example.com",
+  email: "jamiepates@gmail.com",
 
-  /** Leave any of these as empty strings and the link disappears. */
+  /**
+   * Phone is deliberately not on the site. Anyone reaching the
+   * portfolio came from your résumé and already has it, and a public
+   * phone number mostly attracts recruiters selling things. Add it
+   * here if you'd rather have it.
+   */
+
+  /** Empty string hides the link. */
   links: {
     linkedin: "https://www.linkedin.com/in/TODO",
     website: "",
@@ -51,79 +63,94 @@ export const profile = {
   },
 
   /**
-   * Drop a PDF at public/resume.pdf and this button lights up.
-   * Set to empty string to hide the download button entirely.
+   * Drop your résumé PDF at public/resume.pdf. Setting this to an
+   * empty string hides the download button.
    */
   resumeUrl: "/resume.pdf",
 };
 
-/** Three numbers that summarize your career. Shown in the hero. */
+/**
+ * Three numbers in the hero. Keep them true and keep them checkable —
+ * these are the first things someone will ask about.
+ */
 export const headlineStats = [
-  { value: "TODO", label: "years in marketing" },
-  { value: "TODO", label: "campaigns shipped" },
-  { value: "TODO", label: "in managed spend" },
+  { value: "9", suffix: "+", label: "years in marketing & design" },
+  { value: "TODO", label: "projects delivered" },
+  { value: "13", label: "disciplines, one designer" },
 ];
 
 export const experience: Role[] = [
   {
-    company: "TODO — Most recent company",
-    title: "TODO — Your title",
-    period: "TODO — 2023 – Present",
+    company: "Freelance",
+    title: "Graphic Designer",
+    period: "2020 – Present",
     highlights: [
-      "TODO — Lead with an outcome and a number. 'Grew organic signups 4x in 9 months by rebuilding the content engine around bottom-of-funnel search.'",
-      "TODO — Second bullet. Show range: if the first was growth, make this one brand or product.",
+      "Designed case studies, executive summaries, and presentations for Versa Marketing and Answeron, turning client-provided content into brand-aligned materials.",
+      "Created ad graphics and menu designs for Pepper's Grill across print and digital.",
+      "Developed logo design, investor pitch decks, and executive summaries for NYX.AI, establishing the brand's foundational visuals.",
     ],
   },
   {
-    company: "TODO — Previous company",
-    title: "TODO — Your title",
-    period: "TODO — 2021 – 2023",
+    company: "Cerus Fitness",
+    title: "Digital Marketing & Media Specialist",
+    period: "2017 – Present",
     highlights: [
-      "TODO — An outcome.",
-      "TODO — Another outcome.",
+      "Plan and execute campaigns across paid advertising, email, web, social, and CRM.",
+      "Design and build responsive webpages using AI-assisted development workflows, taking marketing concepts from visual design to functional site.",
+      "Develop B2B materials including sponsorship decks, partnership proposals, and co-branded campaigns.",
+      "Create graphics, photography, and video for advertising, social, events, and campaigns.",
     ],
   },
 ];
 
+/** TODO — trim this to what you want to be hired for, not everything you can do. */
 export const skills: SkillGroup[] = [
   {
-    category: "Brand & Content",
+    category: "Design",
     items: [
-      "Brand positioning",
-      "Messaging frameworks",
-      "Copywriting",
-      "Editorial strategy",
-      "Social & community",
+      "Brand & identity",
+      "Logo design",
+      "Print & large format",
+      "Editorial layout",
+      "Art direction",
     ],
   },
   {
-    category: "Growth & Performance",
+    category: "Marketing",
     items: [
-      "Paid search & social",
-      "Lifecycle / email",
-      "Landing page CRO",
-      "Attribution & reporting",
-      "SEO",
-    ],
-  },
-  {
-    category: "Product Marketing",
-    items: [
+      "Campaign development",
       "Go-to-market planning",
-      "Launch management",
-      "Competitive positioning",
-      "Sales enablement",
-      "Customer research",
+      "B2B & B2C",
+      "Copywriting",
+      "Advertising campaigns",
+    ],
+  },
+  {
+    category: "Digital",
+    items: [
+      "AI-assisted web development",
+      "HTML email",
+      "Social media",
+      "Content creation",
+      "Video production",
     ],
   },
   {
     category: "Tools",
     items: [
-      "TODO — HubSpot",
-      "TODO — Google Analytics 4",
-      "TODO — Figma",
-      "TODO — Meta Ads Manager",
-      "TODO — Klaviyo",
+      "Adobe Creative Suite",
+      "Figma",
+      "Claude Code",
+      "CRM & marketing automation",
+      "TODO — add the rest",
     ],
   },
 ];
+
+export const education = {
+  school: "The University of Arizona",
+  degree: "Bachelor of Arts",
+  major: "Studio Art, 3D Emphasis",
+  minor: "General Business Administration",
+  period: "2004 – 2009",
+};

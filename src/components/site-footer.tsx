@@ -13,42 +13,69 @@ export function SiteFooter() {
   ].filter((l) => l.href && !l.href.includes("TODO"));
 
   return (
-    <footer className="mt-24 border-t border-rule">
-      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+    <footer className="border-t border-rule">
+      <div className="grid gap-10 px-5 py-14 sm:px-8 lg:grid-cols-[1.5fr_1fr_1fr]">
         <div>
-          <p className="font-display text-xl">{profile.name}</p>
-          <p className="mt-1 text-sm text-ink-muted">
-            {profile.title}
-            {profile.location && !profile.location.includes("TODO")
-              ? ` · ${profile.location}`
-              : ""}
-          </p>
+          <p className="display text-3xl sm:text-4xl">Let&rsquo;s talk.</p>
+          {!profile.email.includes("TODO") && (
+            <a
+              href={`mailto:${profile.email}`}
+              className="mt-4 inline-block text-lg text-accent underline decoration-accent/30 underline-offset-[6px] transition hover:decoration-accent"
+            >
+              {profile.email}
+            </a>
+          )}
+          <p className="mt-3 text-sm text-ink-faint">{profile.location}</p>
         </div>
 
-        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
-          {site.nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-ink-muted transition hover:text-accent"
-            >
-              {item.label}
-            </Link>
-          ))}
-          {social.map((l) => (
-            <a
-              key={l.label}
-              href={l.href}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="text-ink-muted transition hover:text-accent"
-            >
-              {l.label}
-            </a>
-          ))}
+        <div>
+          <p className="kicker">Site</p>
+          <ul className="mt-4 space-y-2">
+            {site.nav.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="text-sm text-ink-muted transition hover:text-accent"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
+
+        {social.length > 0 && (
+          <div>
+            <p className="kicker">Elsewhere</p>
+            <ul className="mt-4 space-y-2">
+              {social.map((l) => (
+                <li key={l.label}>
+                  <a
+                    href={l.href}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="text-sm text-ink-muted transition hover:text-accent"
+                  >
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+              {profile.resumeUrl && (
+                <li>
+                  <a
+                    href={profile.resumeUrl}
+                    className="text-sm text-ink-muted transition hover:text-accent"
+                  >
+                    Résumé (PDF)
+                  </a>
+                </li>
+              )}
+            </ul>
+          </div>
+        )}
       </div>
-      <div className="mx-auto max-w-6xl px-5 pb-8 text-xs text-ink-muted sm:px-8">
+
+      <div className="border-t border-rule-soft px-5 py-6 font-mono text-[0.65rem] uppercase tracking-[0.14em] text-ink-faint sm:px-8">
         © {year} {profile.name}
       </div>
     </footer>

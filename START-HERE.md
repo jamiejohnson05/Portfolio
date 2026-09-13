@@ -1,35 +1,50 @@
 # Start here, Jamie
 
-This is your portfolio site. It's already built, already deployed, and already
-live on the internet. Nothing about it is broken and nothing is waiting on you
-to make a technical decision.
+This is your portfolio. It's built, it works, and it's ready for your work to
+go into it. Nothing is waiting on you to make a technical decision.
 
-What's left is the part only you can do: replacing the example work with yours.
+**The direction is "Full Bleed"** — the one you picked. Dark ground, big
+condensed headlines, featured projects running the full width of the screen,
+and a page for each of your thirteen categories underneath.
 
 ---
 
-## The shape of it
+## How it's put together
 
-Everything a visitor sees comes from **four files** in `src/content/`. You edit
-those files; the site rebuilds itself. You never have to touch the code that
-does the layout.
+Everything a visitor sees comes from **five files** in `src/content/`. You edit
+those; the site rebuilds itself. You never touch layout code.
 
 | File | What it controls |
 | --- | --- |
-| `src/content/profile.ts` | Your name, tagline, bio, experience, skills, contact links |
-| `src/content/case-studies.ts` | Your projects — the heart of the thing |
-| `src/content/testimonials.ts` | Quotes from people you've worked with |
-| `src/content/site.ts` | Site title, nav labels, your live URL |
+| `src/content/work.ts` | **Your projects.** The main event. |
+| `src/content/categories.ts` | The thirteen disciplines and how they're grouped |
+| `src/content/profile.ts` | Bio, experience, education, skills, contact |
+| `src/content/testimonials.ts` | Quotes (empty array hides the section) |
+| `src/content/site.ts` | Site title, nav, your live URL |
 
-Anywhere you see the word **TODO** or **EXAMPLE**, that's placeholder text
-showing on the live site right now. Search the project for `TODO` to find
-every one of them.
+Anywhere you see **TODO** or **EXAMPLE**, that's placeholder text showing on the
+live site right now. Search the project for both to find every one.
+
+### The one idea worth understanding
+
+A piece of work can take two shapes, and you choose per project:
+
+**An object.** A medal, a poster, a calendar, a look book. Great photo, a
+caption, done. No story attached — because it doesn't need one.
+
+**A case study.** A rebrand, a campaign, a launch plan. Add a `sections` array
+and the page grows into the full narrative: situation, what you did, what
+happened.
+
+Both sit in the same grid and filter the same way. Don't force a story onto a
+piece that doesn't have one — an invented narrative reads as an invented
+narrative, and interviewers ask follow-up questions.
 
 ---
 
 ## Your first hour, in order
 
-### 1. Get the project onto your machine
+### 1. Get it onto your machine
 
 Open Terminal (Mac: `⌘ + Space`, type "Terminal") and run these one at a time:
 
@@ -41,40 +56,38 @@ npm install
 npm run dev
 ```
 
-That last command starts the site locally. Open **http://localhost:3000** in
-your browser. You're now looking at your own copy. Leave that terminal window
-running — it watches for changes and refreshes the browser as you edit.
+Open **http://localhost:3000**. That's your site. Leave the terminal running —
+it refreshes the browser as you edit. `Control + C` stops it.
 
-To stop it later: click the terminal and press `Control + C`.
-
-> If `git` or `npm` aren't found, install [Node.js](https://nodejs.org) (the
-> LTS version) and, on a Mac, run `xcode-select --install`. Then reopen Terminal.
+> If `git` or `npm` aren't found: install [Node.js](https://nodejs.org) (LTS),
+> and on a Mac run `xcode-select --install`. Then reopen Terminal.
 
 ### 2. Connect the folder to Cowork
 
-In the Claude desktop app, click **Add folder** and choose
-`~/Documents/portfolio`. From then on you can just say things like:
+In the Claude desktop app, **Add folder** → `~/Documents/portfolio`. From then
+on you can say things like:
 
-> "Replace the first case study with my Q3 campaign work — here are my notes
-> and three screenshots."
+> "Add the Pepper's Grill menu redesign as a new piece — here are four
+> photos and my notes."
 
-Claude can read this repo, understands its structure (there's a `CLAUDE.md`
-in here explaining it), and can edit the content files for you.
+Claude can read the project, knows how it's structured (there's a `CLAUDE.md`
+here explaining it), and will write the entry for you.
 
 ### 3. Make it yours
 
-Work in this order. Don't skip to the pretty stuff.
+In this order:
 
-1. **`src/content/profile.ts`** — your name, title, tagline, bio, email,
-   LinkedIn, the three headline stats, your experience and skills.
-2. **`src/content/case-studies.ts`** — replace the three examples. See
-   [CONTENT-GUIDE.md](./CONTENT-GUIDE.md) for how to write one that lands.
-3. **Images** — drop your screenshots into `public/work/<project-slug>/` and
-   point the `src` fields at them.
-4. **`public/resume.pdf`** — drop your résumé in as exactly that filename and
+1. **`src/content/profile.ts`** — three of the bio paragraphs are TODO drafts
+   pulled from your résumé. Rewrite them in your voice. Fill in the LinkedIn
+   URL and the middle headline stat.
+2. **`public/resume.pdf`** — drop your résumé in under exactly that name and
    the download button starts working.
-5. **`src/content/testimonials.ts`** — two quotes, or set it to `[]` to hide
-   the section.
+3. **`src/content/work.ts`** — replace the ten examples with real projects. Do
+   your five or six strongest first; they're what fill the homepage.
+4. **Images** — see [CONTENT-GUIDE.md](./CONTENT-GUIDE.md). This layout lives
+   and dies on photography, so this is the step that matters most.
+5. **`src/content/categories.ts`** — rename or drop any category. An empty one
+   disappears from the site automatically.
 6. **`src/content/site.ts`** — set `url` to your real Vercel address.
 
 ### 4. Publish
@@ -85,48 +98,63 @@ git commit -m "Add my real work"
 git push
 ```
 
-Vercel picks that up automatically and your live site updates in about a
-minute. That's the whole deployment process, forever.
+Vercel rebuilds automatically. About a minute later it's live. That's the whole
+deployment process, forever.
 
 ---
 
-## The checklist before you send the link to anyone
+## About the photography
 
-- [ ] Zero instances of `TODO` or `EXAMPLE` remain — search the project for both
-- [ ] Every case study has real numbers, or an honest reason it doesn't
+Full Bleed was the right call for your work, and it comes with one demand: the
+featured images run nearly full-screen, so a weak photo has nowhere to hide.
+
+Five or six strong hero shots is the bar. For physical pieces — medals,
+printed menus, look books, calendars — that usually means shooting them rather
+than scanning them: natural light near a window, a plain surface, shot slightly
+from above, one object in focus. A phone camera is fine. Ask Claude to help
+crop and compress once you have them.
+
+If you only have flat artwork for something, that's fine too — put it in the
+grid rather than making it a featured panel, and pick something photographable
+for the homepage.
+
+---
+
+## Before you send the link to anyone
+
+- [ ] No `TODO` or `EXAMPLE` anywhere — search the project for both
+- [ ] Five or six featured pieces, spread across different categories
 - [ ] Every image is yours; no placeholder JPGs left in `public/work/`
 - [ ] `public/resume.pdf` is your current résumé
-- [ ] Your email in `profile.ts` is one you actually check
-- [ ] LinkedIn URL is correct and the profile matches the site
-- [ ] `site.url` in `src/content/site.ts` is your real live URL
-- [ ] Opened the live site on your phone and it looks right
-- [ ] Clicked every case study and every filter chip
+- [ ] LinkedIn URL is right, and the profile matches the site
+- [ ] `site.url` is your real live URL
+- [ ] Opened it on your phone — this layout changes a lot at that size
+- [ ] Clicked every category page and every filter chip
 - [ ] Someone else has read it for typos
+- [ ] The portfolio URL is on your résumé, and it's short
 
 ---
 
 ## If something breaks
 
-The honest truth is that very little can break here, because the site is just
-data plus layout. But if it does:
+Very little can, because the site is data plus layout. But:
 
-- **The dev server shows a red error page** — it names the file and line. Nine
-  times out of ten it's a missing comma or quote in a content file. Paste the
-  error to Claude in Cowork and it'll fix it.
-- **You pushed and Vercel says the build failed** — run `npm run build`
-  locally first; it'll show you the same error with more room to read it.
-- **An image doesn't show up** — the `src` path is relative to `public/`. A
-  file at `public/work/my-project/hero.jpg` is written as
-  `"/work/my-project/hero.jpg"`. Leading slash, no `public`.
-- **You want to undo everything since your last push** — `git restore .`
+- **Red error page in the dev server** — it names the file and line. Usually a
+  missing comma or quote in a content file. Paste it to Claude; it'll fix it.
+- **Vercel says the build failed** — run `npm run build` locally first; same
+  error, more room to read it.
+- **An image doesn't appear** — paths are relative to `public/`. A file at
+  `public/work/my-project/hero.jpg` is written `"/work/my-project/hero.jpg"`.
+  Leading slash, no `public`.
+- **Undo everything since your last push** — `git restore .`
 
-Nothing you do locally can hurt the live site until you `git push`.
+Nothing you do locally touches the live site until you `git push`.
 
 ---
 
-## Other docs in here
+## Other docs
 
-- **[CONTENT-GUIDE.md](./CONTENT-GUIDE.md)** — how to write a case study that
-  gets you the interview, plus image sizing and file naming
-- **[SETUP.md](./SETUP.md)** — the GitHub and Vercel wiring, for reference
+- **[CONTENT-GUIDE.md](./CONTENT-GUIDE.md)** — writing a piece, image specs,
+  what's safe to publish from past clients
+- **[SETUP.md](./SETUP.md)** — GitHub and Vercel wiring, custom domain
 - **[CLAUDE.md](./CLAUDE.md)** — notes for Claude, not for you

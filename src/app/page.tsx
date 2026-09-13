@@ -1,147 +1,111 @@
 import Link from "next/link";
-import { profile, headlineStats } from "@/content/profile";
-import { featuredCaseStudies } from "@/content/case-studies";
+import { profile } from "@/content/profile";
+import { featuredWork, work } from "@/content/work";
+import { categories, categoryGroups } from "@/content/categories";
 import { testimonials } from "@/content/testimonials";
-import { Container, Section } from "@/components/section";
-import { CaseStudyCard } from "@/components/case-study-card";
+import { Panel } from "@/components/panel";
 import { Reveal } from "@/components/reveal";
 
 export default function HomePage() {
+  const counts = new Map<string, number>();
+  work.forEach((p) =>
+    p.categories.forEach((c) => counts.set(c, (counts.get(c) ?? 0) + 1)),
+  );
+
   return (
     <>
-      {/* ── Hero ─────────────────────────────────────────────── */}
-      <Container className="pt-14 pb-4 sm:pt-24">
-        <div className="max-w-3xl">
-          <p className="text-xs uppercase tracking-[0.18em] text-accent">
-            {profile.title}
-          </p>
-          <h1 className="mt-5 font-display text-5xl leading-[1.05] tracking-tight sm:text-7xl">
-            {profile.name}
-          </h1>
-          <p className="mt-6 text-lg leading-relaxed text-ink-muted sm:text-xl">
-            {profile.tagline}
-          </p>
-
-          <div className="mt-9 flex flex-wrap items-center gap-3">
-            <Link
-              href="/work"
-              className="rounded-full bg-accent px-6 py-3 text-sm font-medium text-paper transition hover:opacity-90"
-            >
-              See the work
-            </Link>
-            <Link
-              href="/contact"
-              className="rounded-full border border-rule px-6 py-3 text-sm transition hover:border-accent hover:text-accent"
-            >
-              Get in touch
-            </Link>
-            {profile.resumeUrl && (
-              <a
-                href={profile.resumeUrl}
-                className="px-2 py-3 text-sm text-ink-muted underline underline-offset-4 transition hover:text-accent"
-              >
-                Download résumé
-              </a>
-            )}
-          </div>
-        </div>
-
-        <Reveal delay={120}>
-          <dl className="mt-16 grid gap-8 border-t border-rule pt-10 sm:grid-cols-3">
-            {headlineStats.map((stat) => (
-              <div key={stat.label}>
-                <dt className="sr-only">{stat.label}</dt>
-                <dd>
-                  <div className="font-display text-4xl leading-none text-ink sm:text-5xl">
-                    {stat.value}
-                  </div>
-                  <div className="mt-2 text-sm text-ink-muted">
-                    {stat.label}
-                  </div>
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </Reveal>
-      </Container>
-
-      {/* ── Featured work ────────────────────────────────────── */}
-      <Section eyebrow="Selected work" title="Three projects worth your time">
-        <div className="grid gap-6 sm:grid-cols-2">
-          {featuredCaseStudies.map((study, i) => (
-            <Reveal key={study.slug} delay={i * 80}>
-              <CaseStudyCard study={study} />
-            </Reveal>
-          ))}
-        </div>
-
-        <div className="mt-10">
+      {/* ── Intro band. Deliberately short — the work is the hero. ── */}
+      <section className="border-b border-rule px-5 py-14 sm:px-8 sm:py-20">
+        <p className="kicker">{profile.location}</p>
+        <h1 className="display mt-5 max-w-[16ch] text-[clamp(2.6rem,8vw,5.5rem)]">
+          {profile.title}
+        </h1>
+        <p className="mt-6 max-w-[52ch] text-lg leading-relaxed text-ink-muted">
+          {profile.tagline}
+        </p>
+        <div className="mt-8 flex flex-wrap items-center gap-6">
           <Link
             href="/work"
-            className="inline-flex items-center gap-1.5 text-sm text-accent underline underline-offset-4"
+            className="border border-accent bg-accent px-6 py-3 font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ground transition hover:bg-accent-deep hover:border-accent-deep"
           >
-            See everything
-            <svg
-              viewBox="0 0 24 24"
-              className="size-4"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <path d="M5 12h14M13 6l6 6-6 6" />
-            </svg>
+            All work
           </Link>
+          {profile.resumeUrl && (
+            <a
+              href={profile.resumeUrl}
+              className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-ink-muted underline underline-offset-[6px] transition hover:text-accent"
+            >
+              Résumé
+            </a>
+          )}
         </div>
-      </Section>
+      </section>
 
-      {/* ── Testimonials (hidden automatically if the array is empty) ── */}
+      {/* ── Featured work, full bleed ─────────────────────────── */}
+      {featuredWork.map((piece, i) => (
+        <Panel key={piece.slug} piece={piece} index={i} priority={i === 0} />
+      ))}
+
+      {/* ── Everything else: the thirteen categories ──────────── */}
+      <section className="px-5 py-16 sm:px-8 sm:py-20">
+        <h2 className="kicker">Everything else</h2>
+        <p className="mt-4 max-w-[46ch] text-ink-muted">
+          The work above is a selection. Below is all of it, by discipline.
+        </p>
+
+        <div className="mt-10 grid gap-x-12 gap-y-10 lg:grid-cols-3">
+          {categoryGroups.map((group) => {
+            const inGroup = categories.filter(
+              (c) => c.group === group && (counts.get(c.id) ?? 0) > 0,
+            );
+            if (inGroup.length === 0) return null;
+
+            return (
+              <div key={group}>
+                <p className="font-mono text-[0.6rem] uppercase tracking-[0.16em] text-ink-faint">
+                  {group}
+                </p>
+                <ul className="mt-4">
+                  {inGroup.map((c) => (
+                    <li key={c.id}>
+                      <Link
+                        href={`/category/${c.id}`}
+                        className="flex items-center justify-between gap-4 border-b border-rule-soft py-3 transition hover:text-accent"
+                      >
+                        <span>{c.label}</span>
+                        <span className="font-mono text-[0.65rem] text-ink-faint">
+                          {counts.get(c.id)}
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* ── Testimonials. Hidden automatically when the array is empty. ── */}
       {testimonials.length > 0 && (
-        <Section
-          eyebrow="What people say"
-          title="The part I can't write myself"
-          className="border-y border-rule bg-paper-raised"
-        >
-          <div className="grid gap-8 sm:grid-cols-2">
+        <section className="border-y border-rule bg-raised px-5 py-16 sm:px-8 sm:py-20">
+          <div className="grid gap-10 lg:grid-cols-2">
             {testimonials.map((t, i) => (
               <Reveal key={t.name} delay={i * 80}>
                 <figure className="flex h-full flex-col">
-                  <blockquote className="flex-1 font-display text-xl leading-snug sm:text-2xl">
+                  <blockquote className="flex-1 text-xl leading-snug sm:text-2xl">
                     &ldquo;{t.quote}&rdquo;
                   </blockquote>
-                  <figcaption className="mt-5 text-sm text-ink-muted">
-                    <span className="text-ink">{t.name}</span> — {t.title},{" "}
+                  <figcaption className="mt-5 font-mono text-[0.65rem] uppercase tracking-[0.14em] text-ink-faint">
+                    <span className="text-accent">{t.name}</span> — {t.title},{" "}
                     {t.company}
                   </figcaption>
                 </figure>
               </Reveal>
             ))}
           </div>
-        </Section>
+        </section>
       )}
-
-      {/* ── Closing CTA ──────────────────────────────────────── */}
-      <Section>
-        <Reveal>
-          <div className="rounded-3xl border border-rule bg-paper-raised px-8 py-14 text-center sm:px-16">
-            <h2 className="font-display text-3xl leading-tight sm:text-4xl">
-              Looking for someone who can do both halves of the job?
-            </h2>
-            <p className="mx-auto mt-4 max-w-xl text-ink-muted">
-              I&rsquo;m currently open to new roles. The fastest way to reach me
-              is email.
-            </p>
-            <Link
-              href="/contact"
-              className="mt-8 inline-block rounded-full bg-accent px-7 py-3 text-sm font-medium text-paper transition hover:opacity-90"
-            >
-              Start a conversation
-            </Link>
-          </div>
-        </Reveal>
-      </Section>
     </>
   );
 }

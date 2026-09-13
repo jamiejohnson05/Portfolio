@@ -51,7 +51,7 @@ export function Gallery({ items }: { items: Asset[] }) {
             key={item.src}
             type="button"
             onClick={() => setOpenIndex(i)}
-            className="group relative aspect-[16/10] overflow-hidden rounded-xl border border-rule bg-accent-soft"
+            className="group relative aspect-[16/10] overflow-hidden border border-rule bg-raised"
             aria-label={`Open image: ${item.alt}`}
           >
             <Image
@@ -83,7 +83,7 @@ export function Gallery({ items }: { items: Asset[] }) {
               alt={active.alt}
               width={1600}
               height={1000}
-              className="max-h-[75vh] w-full rounded-lg object-contain"
+              className="max-h-[75vh] w-full object-contain"
             />
           </div>
 

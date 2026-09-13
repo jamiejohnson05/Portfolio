@@ -1,30 +1,28 @@
 import type { Metadata } from "next";
-import { caseStudies } from "@/content/case-studies";
-import { Container } from "@/components/section";
+import { work } from "@/content/work";
 import { WorkGrid } from "@/components/work-grid";
 
 export const metadata: Metadata = {
   title: "Work",
-  description: "Selected case studies across brand, growth, and product marketing.",
+  description:
+    "Brand, campaign, print, and digital work across thirteen disciplines.",
 };
 
 export default function WorkPage() {
   return (
-    <Container className="py-14 sm:py-20">
-      <header className="max-w-2xl">
-        <p className="text-xs uppercase tracking-[0.18em] text-accent">Work</p>
-        <h1 className="mt-3 font-display text-4xl leading-tight sm:text-5xl">
-          Case studies
-        </h1>
-        <p className="mt-5 text-lg leading-relaxed text-ink-muted">
-          Each one is the same shape: what the situation was, what I did about
-          it, and what happened next.
-        </p>
-      </header>
+    <div className="px-5 py-14 sm:px-8 sm:py-20">
+      <p className="kicker">Archive</p>
+      <h1 className="display mt-5 text-[clamp(2.4rem,7vw,4.5rem)]">
+        Everything, filterable
+      </h1>
+      <p className="mt-5 max-w-[52ch] leading-relaxed text-ink-muted">
+        Some of these are objects that speak for themselves. Some come with the
+        story attached. Filter by discipline, or just scroll.
+      </p>
 
       <div className="mt-12">
-        <WorkGrid studies={caseStudies} />
+        <WorkGrid pieces={work} />
       </div>
-    </Container>
+    </div>
   );
 }

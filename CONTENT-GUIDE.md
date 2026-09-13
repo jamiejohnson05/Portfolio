@@ -4,81 +4,85 @@ How to fill this site with work that gets you interviews.
 
 ---
 
-## The case study, in four parts
+## Adding a piece
 
-Every entry in `src/content/case-studies.ts` has the same skeleton, and the
-skeleton is doing real work. It's the structure hiring managers are already
-scanning for.
+Every entry in `src/content/work.ts` needs six things:
 
-### 1. The summary (one sentence)
+```ts
+{
+  slug: "peppers-grill-menus",        // becomes /work/peppers-grill-menus
+  title: "Pepper's Grill Menu System",
+  client: "Pepper's Grill",
+  year: "2024",
+  categories: ["menus", "brand-creation"],
+  cover: { src: "/work/peppers-grill-menus/cover.jpg", alt: "…" },
+}
+```
 
-This is the sentence that decides whether they click. It goes on the card in
-the grid, in the browser tab, and in link previews when someone shares your
-site.
+That's a complete, working entry. Everything else is optional, and what you add
+determines what kind of page it becomes.
 
-Write it as **tension**, not description.
+### Optional: `summary`
 
-> ✗ "A rebrand project for a regional supplier including new messaging and
-> website copy."
+One sentence. It goes on the card, under the title, and in link previews when
+someone shares the URL. Write it as tension, not description.
+
+> ✗ "A menu redesign project including print and digital versions."
 >
-> ✓ "A supplier with twelve years of goodwill and no consistent story. We
-> found the one idea their customers already believed and built everything
-> back from it."
+> ✓ "A menu system designed to survive seasonal changes without a designer in
+> the loop every quarter."
 
-### 2. The metrics (2–4 numbers)
+### Optional: `metrics`
+
+Two or three numbers. They count up when they scroll into view.
 
 ```ts
 metrics: [
-  { value: "38", suffix: "%", label: "lift in branded search" },
+  { value: "214", label: "members enrolled" },
+  { value: "38", suffix: "%", label: "of active membership" },
   { prefix: "$", value: "1.2", suffix: "M", label: "annual spend managed" },
-  { value: "9", label: "weeks from kickoff to launch" },
 ]
 ```
 
-These count up when they scroll into view, which is the single most
-"interactive portfolio" thing on the site. Make them count.
+**When you can't share the real number** — and with agency and in-house work
+this is constant:
 
-**What to do when you can't share the real number** — and this comes up
-constantly with agency and in-house work:
+- Use a **relative** figure: "2.4x increase" rather than the revenue. Multipliers
+  are rarely confidential.
+- Use a number that isn't about money: interviews run, formats produced, weeks
+  from brief to launch, percentage of the sales team that adopted it.
+- Use **scope**: "9 asset formats", "3 product lines", "24pp".
 
-- Use a **relative** figure instead of an absolute one: "2.4x increase" rather
-  than the revenue itself. Multipliers are rarely confidential.
-- Use a number that isn't about money: interviews run, pages shipped, weeks
-  from brief to launch, percentage of the sales team that adopted the thing.
-- If truly nothing is shareable, use **scope** numbers: "6 markets", "14-person
-  cross-functional team", "3 product lines".
+Never invent one. It's the single mistake a portfolio can't recover from, and
+the interview question is always "walk me through how you got that."
 
-Do not invent numbers. It's the one mistake in a portfolio that can't be
-recovered from, and the follow-up question in the interview is always
-"walk me through how you got that."
+### Optional: `sections` — the story
 
-### 3. The narrative (three sections)
+Add this and the piece becomes a full case study. Three headings work best:
 
-Keep the headings. They're load-bearing.
-
-**The problem** — the situation as it actually was, including the part that
-was awkward. Specificity is credibility. "Nobody had written down what the
-company was for" is more convincing than "brand alignment challenges."
+**The situation** — how it actually was, including the awkward part.
+Specificity is credibility. "They were paying for a redesign four times a year"
+beats "the client needed a scalable solution."
 
 **What I did** — your decisions and your reasoning, in order. This is the
 section that separates a portfolio from a résumé. Say *why* you chose the
-approach, not just what the approach was. If you changed course mid-project,
-say so; it reads as judgment, not failure.
+approach. If you changed course mid-project, say so — it reads as judgment.
 
-**What happened** — results, and one thing you'd do differently. That last
-part is optional but it makes everything above it more believable.
+**What happened** — the result, and optionally one thing you'd do differently.
+That last part makes everything above it more believable.
 
-Write in first person. Say "I" for what you did and "we" for what the team
-did — and be honest about which is which, because interviewers probe this.
+Write in first person. "I" for what you did, "we" for what the team did, and be
+honest about which — interviewers probe this.
 
-### 4. The gallery
+**Leave `sections` off** for pieces that don't need it. A finisher medal with
+three good photographs and a tag list is a complete page. Padding it out with
+invented process hurts you.
 
-Screenshots, ad creative, page designs, slides exported as images. Click to
-open full size. Two to five per case study.
+### Optional: `featured`
 
-Every image needs an `alt` — describe what's in it. It's how the site works
-for anyone using a screen reader, and it's also what shows if an image ever
-fails to load.
+Pins it to the homepage as a full-width panel. **Aim for five or six**, spread
+across different categories so the range shows immediately. These are the
+pieces that need your strongest photography.
 
 ---
 
@@ -89,13 +93,13 @@ fails to load.
 ```
 public/
 └── work/
-    └── your-project-slug/     ← must match the `slug` in case-studies.ts
+    └── your-project-slug/       ← matches the `slug` exactly
         ├── cover.jpg
         ├── gallery-1.jpg
         └── gallery-2.jpg
 ```
 
-Then reference them from `case-studies.ts` **without** the word `public`:
+Referenced from `work.ts` **without** the word `public`:
 
 ```ts
 cover: { src: "/work/your-project-slug/cover.jpg", alt: "…" }
@@ -105,71 +109,93 @@ cover: { src: "/work/your-project-slug/cover.jpg", alt: "…" }
 
 | Use | Dimensions | Notes |
 | --- | --- | --- |
-| Cover | 1600 × 1000 | 16:10. Gets cropped to fill — keep the subject centered. |
-| Gallery | 1600 × 1000 or taller | Shown whole in the lightbox, so any shape works. |
-| Portrait | 800 × 1000 | 4:5 vertical. `public/images/portrait.jpg` |
+| Cover | 2000 × 1250 | Cropped to 21:9 on the piece page and 4:3 on mobile panels — keep the subject centered and leave margin |
+| Gallery | 1600 × 1000 or taller | Shown whole in the lightbox, so any shape works |
+| Portrait | 800 × 1000 | 4:5 vertical, at `public/images/portrait.jpg` |
 | Social card | 1200 × 630 | `public/og-default.jpg` — what shows when the link is shared |
 
-**Keep files under ~400KB each.** Export as JPG at around 80% quality. A
-portfolio that takes six seconds to load reads as a portfolio built by someone
-who doesn't sweat details. (Ask Claude in Cowork to "compress the images in
-public/work" and it'll handle this.)
+**Keep each file under ~400KB.** Export JPG at about 80%. A portfolio that
+takes six seconds to load reads as one built by someone who doesn't sweat
+details. Ask Claude to "compress the images in public/work" and it'll handle it.
 
-### A note on what you're allowed to post
+### Shooting physical work
 
-Work you did for an employer is usually theirs, not yours. In practice most
-people show it anyway and it's fine — but:
+The medals, menus, look books, calendars and posters are the pieces this layout
+was chosen for, and photographs of real objects beat flat artwork every time.
 
-- Strip anything marked confidential, and any customer names or data that
-  weren't public.
-- If you're unsure about a specific piece, describe the work and show a
-  redacted or recreated version rather than the original asset.
-- Never post anything from under an active NDA without asking first.
+- Natural light, near a window, no flash
+- Plain surface — concrete, wood, paper. Not a patterned tablecloth
+- Slightly from above, or straight on. Pick one and be consistent
+- One object sharp; let the rest fall off
+- Shoot more than you need and pick later
+
+A phone is fine. Consistency across the set matters more than any single shot.
+
+### `alt` text
+
+Required on every image. Describe what's in it — "Finisher medal, front face,
+antique brass finish", not "medal photo". It's how the site works for anyone
+using a screen reader, it's what Google reads, and it's what shows if an image
+fails to load.
+
+---
+
+## Categories
+
+The thirteen live in `src/content/categories.ts`, grouped into Design,
+Marketing, and Print & Promo. Each has:
+
+- an `id` used in URLs and in every piece's `categories` array — **don't
+  change these** once work is filed under them
+- a `label` shown on chips and page headings — change freely
+- a `blurb`, the sentence at the top of that category's page
+
+A category with no work in it doesn't appear anywhere on the site, so it's safe
+to leave one sitting there until you have something for it. A piece can be in
+more than one category, and most of yours will be.
+
+To add a fourteenth, add it to `categories.ts` and to the `CategoryId` union in
+`src/lib/types.ts`. Or just ask Claude.
+
+---
+
+## What's safe to publish
+
+Work you did for an employer is usually theirs, not yours. Most people show it
+anyway and it's fine, but:
+
+- Strip anything marked confidential, and any customer data that wasn't public
+- Unsure about a specific piece? Describe the work and show a redacted or
+  recreated version rather than the original file
+- Never post anything under an active NDA without asking first
 
 A case study with blurred numbers and a sharp story beats a leaked deck.
 
 ---
 
-## Filters
-
-Each case study lists one or more `disciplines`:
-
-```ts
-disciplines: ["brand", "product"]
-```
-
-Valid values are `"brand"`, `"growth"`, and `"product"`. These drive the
-filter chips on the Work page. A chip only appears if at least one case study
-uses it, so if you have no growth work, that filter quietly doesn't exist.
-
-To rename the chips, edit `disciplineLabels` in `src/content/site.ts`.
-
----
-
 ## Tailoring for a specific job
 
-One genuinely useful thing you can do that most candidates don't: before a
-final-round interview, reorder `caseStudies` so the most relevant project is
-first, and set `featured: true` on the three that match the role. Push. Send
-the link. It takes four minutes and the site is now built for that company.
+Before a final-round interview: reorder `work.ts` so the most relevant project
+is first, and move `featured: true` onto the three or four that match the role.
+Push. Send the link. Four minutes, and the site is now built for that company.
 
-You can go further and ask Claude in Cowork:
+Or ask Claude:
 
-> "I'm interviewing at a DTC skincare brand for a growth role. Reorder my case
-> studies and rewrite the homepage tagline to lead with performance work."
+> "I'm interviewing at a DTC skincare brand for a brand design role. Reorder my
+> work and rewrite the homepage tagline to lead with identity and packaging."
 
 ---
 
 ## Making it look like you
 
-The accent color is one line — `--accent` in `src/app/globals.css`. Changing
-it changes buttons, links, metric numbers, filter chips, and tags all at once.
-There are a few suggestions in the comment above it.
+- **The accent** — `--accent` in `src/app/globals.css`, currently a warm sand.
+  Changing it changes kickers, links, buttons, and metric numbers at once.
+- **The display face** — Anton, loaded in `src/app/layout.tsx`. Heavy and
+  condensed. Less shouty alternatives: Archivo Black, Oswald, Bebas Neue.
+  Update `--font-display` in `globals.css` to match.
+- **Light instead of dark** — swap `--ground` and `--ink` in `globals.css` and
+  lighten `--raised` and `--rule`. Six lines. But the dark ground is doing real
+  work for the imagery; try it before you commit to it.
 
-The display typeface is Georgia by default, which is a genuinely handsome
-serif and loads instantly. If you want something with more personality, the
-comment at the top of `src/app/layout.tsx` walks through swapping in Google
-Fonts — or just ask Claude to do it.
-
-Resist the urge to make it flashy. The work is the interesting part; the site's
-job is to get out of its way.
+Resist making it flashy. The work is the interesting part; the site's job is to
+get out of its way.
