@@ -4,7 +4,8 @@ Brand, campaign, print, and digital work across thirteen disciplines.
 Next.js 16, React 19, Tailwind CSS v4, TypeScript. Deployed on Vercel,
 auto-deploying from `main`.
 
-**→ [START-HERE.md](./START-HERE.md) — read this first.**
+**→ [JAMIE-SETUP.md](./JAMIE-SETUP.md)** — installing everything, first time.
+**→ [START-HERE.md](./START-HERE.md)** — once it's running, what to edit.
 
 ---
 

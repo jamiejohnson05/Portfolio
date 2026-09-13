@@ -7,6 +7,10 @@ go into it. Nothing is waiting on you to make a technical decision.
 condensed headlines, featured projects running the full width of the screen,
 and a page for each of your thirteen categories underneath.
 
+> Haven't installed anything yet? Start with **[JAMIE-SETUP.md](./JAMIE-SETUP.md)**
+> — Node, Git, cloning this, and connecting the folder to Claude. Then come back
+> here.
+
 ---
 
 ## How it's put together
@@ -50,7 +54,7 @@ Open Terminal (Mac: `⌘ + Space`, type "Terminal") and run these one at a time:
 
 ```bash
 cd ~/Documents
-git clone https://github.com/jamiejohnson05/portfolio.git
+git clone https://github.com/jamiejohnson05/Portfolio.git portfolio
 cd portfolio
 npm install
 npm run dev

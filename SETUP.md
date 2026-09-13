@@ -36,7 +36,7 @@ Only needed once, and only if the repo on GitHub is still empty.
 
 ```bash
 cd path/to/portfolio
-git remote add origin https://github.com/jamiejohnson05/portfolio.git
+git remote add origin https://github.com/jamiejohnson05/Portfolio.git
 git push -u origin main
 ```
 
