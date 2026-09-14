@@ -104,9 +104,9 @@ export const work: Piece[] = [
     gallery: [
       {
         src: "/work/nyx-ai-identity/gallery-1.jpg",
-        alt: "The NYX lockup reversed in solid white on a dark ground",
+        alt: "The NYX lockup in white, its eyes and feather detail knocked out so the dark ground shows through",
         caption:
-          "Reversed to a single solid white — the version that has to survive one-colour printing and anything embroidered.",
+          "The same mark reversed to white, knockouts intact — the version for dark grounds and one-colour printing.",
       },
       {
         src: "/work/nyx-ai-identity/gallery-2.jpg",
