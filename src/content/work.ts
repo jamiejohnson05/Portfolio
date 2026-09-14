@@ -137,17 +137,28 @@ export const work: Piece[] = [
     ],
     cover: {
       src: "/work/trilogy-medal/cover.jpg",
-      alt: "Trilogy medal: a hexagonal medal split into three interlocking segments, shown assembled above the three separate pieces",
+      alt: "Two finished Trilogy medals on dark wood, hexagons of green, blue and yellow enamel with the Cerus bull formed across the three segments",
     },
     gallery: [
       {
         src: "/work/trilogy-medal/gallery-1.jpg",
+        alt: "The finished medals photographed on dark wood with their ribbons and clips",
+        caption:
+          "The finished piece. Hard enamel, and the bull only resolves once the three segments sit together.",
+      },
+      {
+        src: "/work/trilogy-medal/gallery-2.jpg",
         alt: "Promotional graphic reading EARN YOUR TRILOGY, with arrows labelling the three segments of the assembled medal as Gym Series in green, Race Series in blue and Brix Series in yellow",
         caption:
           "The promo that explains the system. Each series earns one segment, and the three only make a hexagon together.",
       },
       {
-        src: "/work/trilogy-medal/gallery-2.jpg",
+        src: "/work/trilogy-medal/gallery-3.jpg",
+        alt: "Production artwork: the hexagonal medal shown assembled above its three separate segments",
+        caption: "The artwork the factory worked from.",
+      },
+      {
+        src: "/work/trilogy-medal/gallery-4.jpg",
         alt: "Two versions of the assembled trilogy medal shown together for comparison",
         caption: "Two of the fourteen versions it took to get the split right.",
       },
