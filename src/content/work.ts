@@ -134,14 +134,14 @@ export const work: Piece[] = [
     ],
     cover: {
       src: "/work/trilogy-medal/cover.jpg",
-      alt: "Two finished Trilogy medals on dark wood, hexagons of green, blue and yellow enamel with the Cerus bull formed across the three segments",
+      alt: "An assembled Trilogy medal resting against weight plates: a hexagon of green, blue and yellow enamel segments forming the Cerus bull, lettered CERUS FITNESS 2023 TRILOGY around the top edge, on a matching ribbon",
     },
     gallery: [
       {
         src: "/work/trilogy-medal/gallery-1.jpg",
-        alt: "The finished medals photographed on dark wood with their ribbons and clips",
+        alt: "Two of the finished medals photographed on dark wood with their ribbons and clips",
         caption:
-          "The finished piece. Hard enamel, and the bull only resolves once the three segments sit together.",
+          "Two of them side by side. Hard enamel, and the bull only resolves once the three segments sit together.",
       },
       {
         src: "/work/trilogy-medal/gallery-2.jpg",
