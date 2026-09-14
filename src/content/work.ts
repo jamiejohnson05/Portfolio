@@ -2,371 +2,381 @@ import type { Piece } from "@/lib/types";
 
 /**
  * ─────────────────────────────────────────────────────────────
- *  YOUR WORK.
+ *  THE WORK.
  *
- *  Every entry below is an EXAMPLE using real client names from
- *  your résumé and invented project details. They're here to show
- *  the two shapes a piece can take. Replace them one at a time.
+ *  Version 1. Eleven real pieces, six featured.
  *
- *  ── The two shapes ──
+ *  Nothing here has a `sections` case study yet, and that is
+ *  deliberate: a case study needs the situation, the decisions
+ *  and the result in your words, and inventing those is the one
+ *  mistake a portfolio can't recover from. Every piece below is
+ *  an object page — image, facts, gallery — which is honest and
+ *  complete on its own.
  *
- *  1. AN OBJECT. A medal, a poster, a calendar. Great photo,
- *     good caption, done. No `sections` — the page renders as
- *     images with a short description. See `hyrox-finisher-medal`.
- *
- *  2. A CASE STUDY. A rebrand, a campaign, a launch plan. Add
- *     `sections` and it renders the full story: situation, what
- *     you did, what happened. See `nyx-ai-identity`.
- *
- *  Both live in the same grid and filter the same way. Don't force
- *  a story onto a piece that doesn't need one — an invented
- *  narrative reads as an invented narrative.
- *
- *  ── Practical notes ──
- *
- *  • Images go in `public/work/<slug>/`. See CONTENT-GUIDE.md.
- *  • Order matters: this array is the order work appears.
- *  • `featured: true` pins it to the homepage. Aim for 5–6, spread
- *    across different categories.
- *  • Category ids come from src/content/categories.ts.
+ *  Adding a story later means adding a `sections` array to a
+ *  piece. Nothing else changes.
  * ─────────────────────────────────────────────────────────────
  */
 
 export const work: Piece[] = [
-  // ── An object. No story needed. ────────────────────────────
+  /* ── Featured ─────────────────────────────────────────────── */
+
   {
-    slug: "hyrox-finisher-medal",
-    title: "Hyrox Finisher Medal",
-    client: "EXAMPLE — Cerus Fitness",
-    year: "2025",
-    categories: ["medal-design"],
+    slug: "cerus-fitness-festival",
+    title: "Cerus Fitness Festival",
+    client: "Cerus Fitness",
+    year: "2023",
+    categories: ["campaigns", "posters", "medal-design", "promotional"],
     featured: true,
     summary:
-      "EXAMPLE — Finisher medal, ribbon, and presentation case for an affiliate race launch.",
-    role: "Designer",
+      "A two-day community fitness event, carried from the flyer on the wall to the medal in the finisher's hand.",
+    role: "Design & campaign",
+    metrics: [
+      { value: "2", label: "days, one identity" },
+      { value: "4", label: "competitive formats" },
+      { value: "3", label: "media — print, social, object" },
+    ],
     cover: {
-      src: "/work/hyrox-finisher-medal/cover.jpg",
-      alt: "EXAMPLE — Finisher medal, front face, antique brass finish",
+      src: "/work/cerus-fitness-festival/cover.jpg",
+      alt: "Cerus Fitness Festival social ad: a six-photo grid of event moments around the festival lockup and date",
     },
     gallery: [
       {
-        src: "/work/hyrox-finisher-medal/gallery-1.jpg",
-        alt: "EXAMPLE — Medal reverse with event details",
-        caption: "Reverse, with the year and distance struck rather than printed.",
+        src: "/work/cerus-fitness-festival/gallery-1.jpg",
+        alt: "Festival flyer, front: event photography grid above the Cerus Fitness Festival lockup, with the weekend schedule",
+        caption:
+          "Flyer front. The whole weekend on one sheet — 5K, one-mile kids' run, 400m OCR course, strength games, plus the free seminars and classes.",
       },
       {
-        src: "/work/hyrox-finisher-medal/gallery-2.jpg",
-        alt: "EXAMPLE — Ribbon options in three colorways",
-        caption: "Three ribbon colorways presented to the client.",
+        src: "/work/cerus-fitness-festival/gallery-2.jpg",
+        alt: "Festival flyer, back: group photo at the start line above the lockup, date, time and address, with a QR code",
+        caption:
+          "Flyer back. Lockup, date, location and a QR code straight to registration.",
+      },
+      {
+        src: "/work/cerus-fitness-festival/gallery-3.jpg",
+        alt: "Square social ad for Strength Games: an athlete in a front-rack squat holding a sandbag, with date and venue",
+        caption:
+          "Strength Games ad. The festival runs two days and offers eight things; this sells one of them. Easier to care about in a feed.",
+      },
+      {
+        src: "/work/cerus-fitness-festival/gallery-4.jpg",
+        alt: "Fitness Festival finisher medal: circular badge with the Cerus bull, brush-script festival wordmark and the Colorado flag",
+        caption: "Finisher medal, round direction — the one that shipped.",
+      },
+      {
+        src: "/work/cerus-fitness-festival/gallery-5.jpg",
+        alt: "Race bib for the Fitness Festival 5K with large number and tear-off strips for a merchandise discount and bag claim",
+        caption:
+          "5K bib. The tear-offs are a $5 merch credit and a bag claim — the number every finisher is already wearing, doing a second job.",
       },
     ],
-    tags: ["Concept", "Vector artwork", "Vendor production files", "Ribbon design"],
+    tags: [
+      "Event identity",
+      "Flyer",
+      "Social ads",
+      "Medal",
+      "Race bib",
+      "Illustrator",
+    ],
   },
 
-  // ── A full case study. ─────────────────────────────────────
   {
     slug: "nyx-ai-identity",
-    title: "An identity for a company that didn't exist yet",
-    client: "EXAMPLE — NYX.AI",
-    year: "2024 – 2025",
-    categories: ["brand-creation", "logo-design", "pitch-decks"],
+    title: "NYX.AI Identity",
+    client: "NYX.AI",
+    year: "2025 – 2026",
+    categories: ["logo-design", "brand-creation"],
     featured: true,
     summary:
-      "EXAMPLE — Logo system, brand foundations, and the investor materials that carried the first raise — built to survive a product that was still moving.",
-    role: "Brand Designer",
+      "An owl mark and wordmark lockup for a company that was still being built around it.",
+    role: "Identity design",
     cover: {
       src: "/work/nyx-ai-identity/cover.jpg",
-      alt: "EXAMPLE — NYX.AI wordmark and symbol across dark and light applications",
+      alt: "NYX.AI logo lockup: a black owl with a full wingspan above the NYX wordmark in cyan",
     },
-    metrics: [
-      { value: "3", label: "logo directions presented" },
-      { value: "12", label: "stakeholder-ready templates delivered" },
-      { value: "6", label: "weeks, brief to handoff" },
-    ],
-    sections: [
-      {
-        heading: "The situation",
-        body: [
-          "EXAMPLE — The product was pre-launch and still changing weekly. Anything I designed around a specific feature would be wrong within a month, and the founders needed materials for investor conversations that were already scheduled.",
-          "So the brief wasn't really 'design a logo.' It was: build something that can stand for a company whose product hasn't settled yet.",
-        ],
-      },
-      {
-        heading: "What I did",
-        body: [
-          "EXAMPLE — I started with the founders rather than the product — two long conversations about what they believed that their competitors didn't. The mark came out of that, not out of a moodboard.",
-          "Three directions, each with a different argument attached. We went with the one that was least literal, on the theory that it would age better as the product moved.",
-          "Then the unglamorous half: a palette that works on dark and light, type rules, and twelve templates — deck, one-pager, email header, social — so the founders could produce their own materials without coming back to me every week.",
-        ],
-      },
-      {
-        heading: "What happened",
-        body: [
-          "EXAMPLE — The identity carried the first raise and, more usefully, it's still in use two product pivots later. The templates are the part they mention.",
-        ],
-      },
-    ],
     gallery: [
       {
         src: "/work/nyx-ai-identity/gallery-1.jpg",
-        alt: "EXAMPLE — The three logo directions presented",
-        caption: "Three directions. The one on the right was least literal, and won.",
+        alt: "NYX.AI lockup in cyan on a dark ground",
+        caption: "Light lockup, for dark applications.",
       },
       {
         src: "/work/nyx-ai-identity/gallery-2.jpg",
-        alt: "EXAMPLE — Brand foundations: palette, type scale, spacing",
-        caption: "Foundations — the part that makes the templates possible.",
+        alt: "NYX.AI owl mark alone in cyan",
+        caption: "The mark on its own — it has to work without the wordmark.",
+      },
+      {
+        src: "/work/nyx-ai-identity/gallery-3.jpg",
+        alt: "NYX.AI owl mark in white with cyan eyes and chest detail",
+        caption: "Two-colour cutout version for single-colour printing.",
       },
     ],
-    tags: ["Logo system", "Brand foundations", "Templates", "Illustrator", "Figma"],
+    tags: ["Logo design", "Brand foundations", "Illustrator"],
   },
 
-  // ── A campaign: story plus a lot of surfaces. ──────────────
   {
-    slug: "cerus-spring-challenge",
-    title: "Six weeks, one message, every surface",
-    client: "EXAMPLE — Cerus Fitness",
-    year: "2025",
-    categories: ["campaigns", "posters", "banners", "web-design"],
+    slug: "trilogy-medal",
+    title: "Trilogy Medal",
+    client: "Cerus Fitness",
+    year: "2023",
+    categories: ["medal-design"],
     featured: true,
     summary:
-      "EXAMPLE — A six-week member challenge that ran across paid social, email, in-gym print, and a landing page built to convert walk-ins.",
-    role: "Campaign Design & Execution",
-    cover: {
-      src: "/work/cerus-spring-challenge/cover.jpg",
-      alt: "EXAMPLE — Spring Challenge campaign assets across print and digital",
-    },
+      "Three medals that stand alone and lock together — finish all three series and you have one piece.",
+    role: "Medal design",
     metrics: [
-      { value: "214", label: "members enrolled" },
-      { value: "38", suffix: "%", label: "of active membership" },
-      { value: "9", label: "asset formats produced" },
+      { value: "3", label: "awards in the series" },
+      { value: "1", label: "piece when assembled" },
     ],
-    sections: [
-      {
-        heading: "The situation",
-        body: [
-          "EXAMPLE — Spring is the dead zone between New Year's resolutions and summer. Attendance sags, and the usual fix — a discount — trains people to wait for discounts.",
-        ],
-      },
-      {
-        heading: "What I did",
-        body: [
-          "EXAMPLE — Built the whole thing around one idea that didn't involve price: a six-week challenge people signed up for in pairs, so quitting meant letting someone down.",
-          "One visual system, nine formats: paid social in three ratios, two email templates built in HTML, in-gym repeater banners, a poster series, entry forms, and a landing page. The constraint I set was that any member should recognize it as the same campaign whether they saw it on Instagram or on the wall by the squat racks.",
-        ],
-      },
-      {
-        heading: "What happened",
-        body: [
-          "EXAMPLE — 214 members enrolled, about 38% of the active base, with no discount attached. The pairs mechanic is the part I'd reuse.",
-        ],
-      },
-    ],
+    cover: {
+      src: "/work/trilogy-medal/cover.jpg",
+      alt: "Trilogy medal: a hexagonal medal split into three interlocking segments, shown assembled above the three separate pieces",
+    },
     gallery: [
       {
-        src: "/work/cerus-spring-challenge/gallery-1.jpg",
-        alt: "EXAMPLE — Paid social set in three aspect ratios",
-      },
-      {
-        src: "/work/cerus-spring-challenge/gallery-2.jpg",
-        alt: "EXAMPLE — In-gym repeater banners installed",
-        caption: "Repeater banners — the format that did the most work.",
+        src: "/work/trilogy-medal/gallery-1.jpg",
+        alt: "Two versions of the assembled trilogy medal shown together for comparison",
+        caption: "Two of the fourteen versions it took to get the split right.",
       },
     ],
-    tags: ["Paid social", "HTML email", "Large format", "Landing page", "Photography"],
+    tags: [
+      "Medal design",
+      "Series design",
+      "Production files",
+      "Illustrator",
+    ],
   },
 
-  // ── Strategy work. Story-led, light on imagery. ────────────
   {
-    slug: "hyrox-affiliate-launch",
-    title: "Launching a gym into a global race format",
-    client: "EXAMPLE — Cerus Fitness",
-    year: "2025",
-    categories: ["go-to-market", "campaigns", "presentations"],
+    slug: "mountain-athlete",
+    title: "Mountain Athlete",
+    client: "Cerus Fitness",
+    year: "2026",
+    categories: ["promotional"],
     featured: true,
     summary:
-      "EXAMPLE — The go-to-market plan for becoming a Hyrox affiliate: positioning, sequencing, channel mix, and the materials each phase needed.",
-    role: "Go-to-Market Planning & Design",
+      "A topographic map cut into the letterforms, for a gym at the foot of the Front Range.",
+    role: "Apparel design",
     cover: {
-      src: "/work/hyrox-affiliate-launch/cover.jpg",
-      alt: "EXAMPLE — Launch plan phases and supporting materials",
+      src: "/work/mountain-athlete/cover.jpg",
+      alt: "CERUS ATHLETE apparel graphic with a topographic ridge-line texture filling the letters above the bull mark",
     },
-    metrics: [
-      { value: "3", label: "launch phases" },
-      { value: "11", label: "weeks from decision to first event" },
-    ],
-    sections: [
+    gallery: [
       {
-        heading: "The situation",
-        body: [
-          "EXAMPLE — Affiliating with a race format means inheriting an audience that already has opinions. The risk wasn't that nobody would come — it was that the existing members would feel the gym had been taken over by something that wasn't for them.",
-        ],
-      },
-      {
-        heading: "What I did",
-        body: [
-          "EXAMPLE — Wrote the plan in three phases, deliberately slow: tell existing members first and give them a head start, then open to the local community, then market outward to the regional race circuit.",
-          "Each phase got its own materials and its own message. Phase one was email and in-gym only — no social — specifically so members found out from us rather than from an ad.",
-          "I also built the partner deck used to bring in two local sponsors, which covered the equipment cost.",
-        ],
-      },
-      {
-        heading: "What happened",
-        body: [
-          "EXAMPLE — First event sold out. More to the point, member churn didn't move, which was the number I was actually watching.",
-        ],
+        src: "/work/mountain-athlete/gallery-1.jpg",
+        alt: "Rectangle-framed version of the Cerus Athlete mountain graphic in solid black",
+        caption: "Framed version, one of four colourways.",
       },
     ],
-    tags: ["Positioning", "Launch sequencing", "Partner deck", "Email", "Sponsorship"],
+    tags: ["Apparel", "Lettering", "Illustrator"],
   },
 
-  // ── An object with light context. ──────────────────────────
   {
-    slug: "peppers-grill-menus",
-    title: "Pepper's Grill Menu System",
-    client: "EXAMPLE — Pepper's Grill",
-    year: "2023 – 2024",
-    categories: ["menus", "brand-creation", "promotional"],
+    slug: "womens-lifestyle-program",
+    title: "Women's Lifestyle Program",
+    client: "Cerus Fitness",
+    year: "2023",
+    categories: ["campaigns"],
     featured: true,
     summary:
-      "EXAMPLE — A menu system designed to survive seasonal changes without a designer in the loop every quarter.",
-    role: "Designer",
+      "A social campaign that gives the message its own panel beside the footage, so it reads before the video does.",
+    role: "Campaign design & video",
     cover: {
-      src: "/work/peppers-grill-menus/cover.jpg",
-      alt: "EXAMPLE — Dinner, brunch, and bar menus laid out together",
-    },
-    sections: [
-      {
-        heading: "The ask",
-        body: [
-          "EXAMPLE — They were paying for a redesign every time the menu changed, which was four times a year. The actual deliverable wasn't a menu — it was a system they could update themselves.",
-          "Built a grid that handles anywhere from 14 to 30 items without looking sparse or crowded, plus a locked template and a one-page guide on what not to touch.",
-        ],
-      },
-    ],
-    gallery: [
-      {
-        src: "/work/peppers-grill-menus/gallery-1.jpg",
-        alt: "EXAMPLE — Menu grid at 14 items and at 30 items",
-        caption: "The same grid at its two extremes.",
-      },
-    ],
-    tags: ["Print", "Template system", "Typography", "InDesign"],
-  },
-
-  // ── Web. ───────────────────────────────────────────────────
-  {
-    slug: "cerus-site-redesign",
-    title: "Cerus Fitness Site Redesign",
-    client: "EXAMPLE — Cerus Fitness",
-    year: "2024",
-    categories: ["web-design", "brand-creation"],
-    summary:
-      "EXAMPLE — Designed and built, using AI-assisted development to take it from layout to a working responsive site.",
-    role: "Design & Build",
-    cover: {
-      src: "/work/cerus-site-redesign/cover.jpg",
-      alt: "EXAMPLE — Cerus Fitness homepage on desktop and mobile",
-    },
-    metrics: [
-      { value: "2.8", suffix: "x", label: "increase in trial signups" },
-      { value: "41", suffix: "%", label: "drop in mobile bounce rate" },
-    ],
-    sections: [
-      {
-        heading: "What I did",
-        body: [
-          "EXAMPLE — The old site buried the one thing people came for — the schedule — three clicks deep. I rebuilt around it: schedule first, trial signup always visible, everything else secondary.",
-          "Designed it and built it, writing the front end with AI-assisted development rather than handing comps to a developer. That's become how I work: it collapses the gap between what I design and what actually ships.",
-        ],
-      },
-    ],
-    gallery: [
-      {
-        src: "/work/cerus-site-redesign/gallery-1.jpg",
-        alt: "EXAMPLE — Mobile screens: schedule, trial signup, class detail",
-      },
-    ],
-    tags: ["Responsive design", "AI-assisted development", "HTML/CSS", "Figma"],
-    externalUrl: { label: "Visit the site", href: "https://example.com" },
-  },
-
-  // ── Deck work. ─────────────────────────────────────────────
-  {
-    slug: "nyx-investor-deck",
-    title: "NYX.AI Investor Deck",
-    client: "EXAMPLE — NYX.AI",
-    year: "2025",
-    categories: ["pitch-decks", "presentations"],
-    summary:
-      "EXAMPLE — Eighteen slides carrying a raise, built from the narrative outward rather than the template inward.",
-    role: "Designer",
-    cover: {
-      src: "/work/nyx-investor-deck/cover.jpg",
-      alt: "EXAMPLE — Investor deck cover and key slides",
+      src: "/work/womens-lifestyle-program/cover.jpg",
+      alt: "Still from the women's programme ad: a member lifting at a box, beside the headline WOMEN JOIN OUR LIFESTYLE PROGRAM",
     },
     gallery: [
       {
-        src: "/work/nyx-investor-deck/gallery-1.jpg",
-        alt: "EXAMPLE — Market and traction slides",
-        caption: "The two slides that got the most questions, so they got the most work.",
+        src: "/work/womens-lifestyle-program/gallery-1.jpg",
+        alt: "Ad still: a member performing a barbell lift, with the campaign headline alongside",
+        caption:
+          "The type block holds its position while the footage changes behind it.",
+      },
+      {
+        src: "/work/womens-lifestyle-program/gallery-2.jpg",
+        alt: "Ad still: members training on boxes in the gym, with the campaign headline alongside",
+        caption: "Real members, real classes — no stock footage.",
       },
     ],
-    tags: ["Narrative", "Data visualization", "Figma", "PowerPoint"],
+    tags: ["Social campaign", "Video", "Advertising"],
   },
 
-  // ── Client-material transformation. ────────────────────────
   {
-    slug: "versa-case-study-series",
-    title: "Versa Marketing Case Study Series",
-    client: "EXAMPLE — Versa Marketing",
-    year: "2022 – 2024",
-    categories: ["presentations", "brand-creation"],
+    slug: "retro-outline",
+    title: "Retro Outline",
+    client: "Cerus Fitness",
+    year: "2023",
+    categories: ["promotional"],
+    featured: true,
     summary:
-      "EXAMPLE — Client-provided content turned into a brand-aligned case study format, repeated across a dozen engagements.",
-    role: "Designer",
+      "A sherbet gradient run through an outlined wordmark, to see how far the brand would stretch.",
+    role: "Apparel design",
     cover: {
-      src: "/work/versa-case-study-series/cover.jpg",
-      alt: "EXAMPLE — Case study spreads from the series",
+      src: "/work/retro-outline/cover.jpg",
+      alt: "CERUS FITNESS wordmark in a dimensional outline style filled with a pink, orange and yellow gradient, with a small bull mark above",
     },
-    tags: ["Editorial layout", "Template system", "Executive summaries"],
+    tags: ["Apparel", "Lettering", "Colour study", "Illustrator"],
   },
 
-  // ── Pure objects. ──────────────────────────────────────────
+  /* ── The rest ─────────────────────────────────────────────── */
+
   {
-    slug: "peppers-summer-lookbook",
-    title: "Summer Look Book",
-    client: "EXAMPLE — Pepper's Grill",
-    year: "2024",
-    categories: ["look-books", "promotional"],
-    summary: "EXAMPLE — A 24-page seasonal book: food photography, menu, and the room.",
-    role: "Design & Art Direction",
+    slug: "cerus-arena",
+    title: "Cerus Arena",
+    client: "Cerus Fitness",
+    year: "2023",
+    categories: ["campaigns", "medal-design", "banners", "promotional"],
+    summary:
+      "A competition event where the idea and the messaging were mine, and then so was everything they landed on.",
+    role: "Concept, messaging & design",
     cover: {
-      src: "/work/peppers-summer-lookbook/cover.jpg",
-      alt: "EXAMPLE — Look book cover and interior spreads",
+      src: "/work/cerus-arena/cover.jpg",
+      alt: "Cerus Arena 2023 medal: circular badge with the bull mark, laurel wreath and ARENA in brush script",
     },
     gallery: [
       {
-        src: "/work/peppers-summer-lookbook/gallery-1.jpg",
-        alt: "EXAMPLE — Interior spreads",
+        src: "/work/cerus-arena/gallery-1.jpg",
+        alt: "Cerus Arena race bib with a large number and tear-off strips for a merchandise discount and bag claim",
+        caption: "Bib, with the merch credit and bag claim built in.",
+      },
+      {
+        src: "/work/cerus-arena/gallery-2.jpg",
+        alt: "Arena station sign reading SECTION 5 with sled push and sled pull movements and their loads",
+        caption:
+          "Station signage. Each sign carries its movements and loads so a competitor can read the floor at a glance.",
+      },
+      {
+        src: "/work/cerus-arena/gallery-3.jpg",
+        alt: "Arena station sign reading SECTION 8 with med ball sit-ups and echo bike calories",
+        caption: "Section 8.",
+      },
+      {
+        src: "/work/cerus-arena/gallery-4.jpg",
+        alt: "Still from the Cerus Arena event film: a competitor pressing a sandbag overhead on the field",
+        caption: "From the event film, cut several ways for different channels.",
+      },
+      {
+        src: "/work/cerus-arena/gallery-5.jpg",
+        alt: "Cerus Arena division winner medal with laurel wreath and the year",
+        caption: "Division winner award.",
       },
     ],
-    tags: ["Art direction", "Photography", "Print production"],
+    tags: [
+      "Event concept",
+      "Messaging",
+      "Medal",
+      "Signage",
+      "Race bib",
+      "Video",
+    ],
   },
+
   {
-    slug: "cerus-2026-calendar",
-    title: "2026 Member Calendar",
-    client: "EXAMPLE — Cerus Fitness",
-    year: "2025",
-    categories: ["calendars", "promotional"],
+    slug: "cerusbolt",
+    title: "CerusBolt",
+    client: "Cerus Fitness",
+    year: "2023",
+    categories: ["campaigns", "medal-design", "promotional"],
     summary:
-      "EXAMPLE — A wall calendar members actually kept, built around the race season rather than the months.",
-    role: "Designer",
+      "An obstacle race, from the medal at the finish to the social cut that filled the start line.",
+    role: "Design & campaign",
     cover: {
-      src: "/work/cerus-2026-calendar/cover.jpg",
-      alt: "EXAMPLE — 2026 wall calendar, cover and a month spread",
+      src: "/work/cerusbolt/cover.jpg",
+      alt: "CerusBolt 2023 medal: circular badge with the bull mark, BOLT in brush script and the Colorado flag",
     },
-    tags: ["Print", "Photography", "Grid design"],
+    gallery: [
+      {
+        src: "/work/cerusbolt/gallery-1.jpg",
+        alt: "CerusBolt race bib with a large number and tear-off merchandise and bag claim strips",
+        caption: "Bib, same tear-off system as the other races.",
+      },
+      {
+        src: "/work/cerusbolt/gallery-2.jpg",
+        alt: "Still from the CerusBolt ad: competitors climbing an obstacle wall, captioned 20+ EPIC OBSTACLES",
+        caption: "Vertical social cut — 20+ epic obstacles, let's get muddy.",
+      },
+      {
+        src: "/work/cerusbolt/gallery-3.jpg",
+        alt: "CerusBolt medal in a blue Colorado-flag colourway",
+        caption: "One of seven medal versions.",
+      },
+    ],
+    tags: ["Medal", "Race bib", "Social video", "Event branding"],
+  },
+
+  {
+    slug: "ombre-smiley-dumbbell",
+    title: "Ombré Smiley",
+    client: "Cerus Fitness",
+    year: "2026",
+    categories: ["promotional"],
+    summary:
+      "Twelve iterations from a flat black kettlebell to a checkerboard, lightning bolts and a peach-to-teal fade.",
+    role: "Apparel design",
+    cover: {
+      src: "/work/ombre-smiley-dumbbell/cover.jpg",
+      alt: "Apparel graphic: a smiling kettlebell with a lightning bolt, on a checkerboard panel with a peach-to-teal gradient and the Cerus Fitness banner",
+    },
+    gallery: [
+      {
+        src: "/work/ombre-smiley-dumbbell/gallery-1.jpg",
+        alt: "The same smiley kettlebell graphic rendered in solid black line work",
+        caption: "Where it started — solid black, no gradient.",
+      },
+      {
+        src: "/work/ombre-smiley-dumbbell/gallery-2.jpg",
+        alt: "Teal and peach version of the smiley kettlebell graphic",
+        caption: "Teal and peach colourway.",
+      },
+    ],
+    tags: ["Apparel", "Illustration", "Colour study", "Illustrator"],
+  },
+
+  {
+    slug: "cerusbrix-athlete",
+    title: "CerusBrix Athlete",
+    client: "Cerus Fitness",
+    year: "2022 – 2023",
+    categories: ["logo-design", "promotional"],
+    summary:
+      "A dimensional lettering mark for the competition sub-brand, built to survive roughly a dozen colourways.",
+    role: "Mark design",
+    cover: {
+      src: "/work/cerusbrix-athlete/cover.jpg",
+      alt: "CerusBrix ATHLETE lockup: the faceted bull mark beside dimensional block lettering in navy and yellow",
+    },
+    gallery: [
+      {
+        src: "/work/cerusbrix-athlete/gallery-1.jpg",
+        alt: "The CerusBrix Athlete lockup in a red and white colourway",
+        caption: "Red and white, one of about twelve.",
+      },
+    ],
+    tags: ["Lettering", "Sub-brand", "Apparel", "Illustrator"],
+  },
+
+  {
+    slug: "cerus-bull-mark",
+    title: "Cerus Bull Mark",
+    client: "Cerus Fitness",
+    year: "2026",
+    categories: ["logo-design", "promotional"],
+    summary:
+      "The faceted bull, reduced until it still reads at the size of an obstacle wall and a shirt pocket.",
+    role: "Mark design",
+    cover: {
+      src: "/work/cerus-bull-mark/cover.jpg",
+      alt: "The Cerus bull mark in solid black: a faceted, angular bull's head with raised horns",
+    },
+    gallery: [
+      {
+        src: "/work/cerus-bull-mark/gallery-1.jpg",
+        alt: "The Cerus bull mark reversed in white on a dark ground",
+        caption: "Reversed, for dark ground and for vinyl.",
+      },
+    ],
+    tags: ["Logo design", "Mark", "Illustrator"],
   },
 ];
 

@@ -3,10 +3,6 @@ import type { Role, SkillGroup } from "@/lib/types";
 /**
  * ─────────────────────────────────────────────────────────────
  *  YOU.
- *
- *  Pre-filled from your résumé. Anything marked TODO is a
- *  placeholder that will show on the live site until you write
- *  over it — those are the bits only you can supply.
  * ─────────────────────────────────────────────────────────────
  */
 
@@ -16,67 +12,51 @@ export const profile = {
   /** Under your name in the hero. Keep it short. */
   title: "Digital Marketing & Graphic Design",
 
-  /**
-   * The line an employer reads in three seconds, straight off your
-   * résumé link. Say what you do and what makes you different —
-   * for you that's the design-plus-execution combination, and the
-   * AI-assisted build workflow, which most designers still don't have.
-   */
+  /** The line an employer reads in three seconds. */
   tagline:
-    "Nine years of strategy, design, and storytelling — brands, campaigns, and the digital experiences that carry them. I take work from concept through production, and I build what I design.",
+    "I'm a graphic designer and marketer who likes turning ideas into something real — logos, campaigns, medals, signage, and the pages that carry them. Nine years of taking a thing from the first sketch to the thing you can hold.",
 
-  /**
-   * Two or three short paragraphs for the About page. Write like you
-   * talk. TODO — the draft below is a starting point from your résumé;
-   * rewrite it in your voice.
-   */
   bio: [
-    "TODO — I'm a digital marketing specialist and graphic designer with nine years of combining strategy, design, technology, and storytelling. Most of my work lives where those overlap: a brand that needs a mark and a launch plan, a campaign that needs to work on a wall and in an inbox.",
-    "TODO — Add the part your résumé can't say. What kind of problem do you actually like being handed? What's the project you'd want to talk about in an interview?",
-    "TODO — Close with what you're looking for next, and one human sentence. Studio Art degree, 3D emphasis, University of Arizona — worth mentioning if it explains how you think about objects like medals.",
+    "I'm a graphic designer and marketer who likes turning ideas into something real.",
+    "I've designed a little bit of everything — logos, websites, menus, pitch decks, merchandise, event medals, social, email, ads, signage, print, and whole event campaigns. I like that the work doesn't fit neatly into one box.",
+    "The projects I'm proudest of are the ones I got to build from the beginning: making the look, working out the messaging, designing every piece, and then seeing the whole thing standing up in the real world. That's my favourite part of the job.",
+    "I'm curious by nature and I like figuring things out. That's what got me using AI and coding tools in my own process — building webpages, designing custom emails, finding new ways to get an idea made.",
+    "Mostly I just like making things. Good design, big ideas, new tools, problems worth solving, work with a point to it. And I'm always interested in what I get to make next.",
   ],
 
-  /** Shown on the About page. Drop a photo at public/images/portrait.jpg. */
+  /**
+   * Drop a photo at public/images/portrait.jpg and set src to
+   * "/images/portrait.jpg". While src is empty the About page
+   * simply runs without a portrait — nothing breaks.
+   */
   portrait: {
-    src: "/images/portrait.jpg",
-    alt: "TODO — Portrait of Jamie Johnson",
+    src: "",
+    alt: "Portrait of Jamie Johnson",
   },
 
   location: "Frederick, CO",
 
-  /** Used for the contact links and the mailto: button. */
   email: "jamiepates@gmail.com",
-
-  /**
-   * Phone is deliberately not on the site. Anyone reaching the
-   * portfolio came from your résumé and already has it, and a public
-   * phone number mostly attracts recruiters selling things. Add it
-   * here if you'd rather have it.
-   */
 
   /** Empty string hides the link. */
   links: {
-    linkedin: "https://www.linkedin.com/in/TODO",
+    linkedin: "",
     website: "",
     instagram: "",
     x: "",
   },
 
-  /**
-   * Drop your résumé PDF at public/resume.pdf. Setting this to an
-   * empty string hides the download button.
-   */
   resumeUrl: "/resume.pdf",
 };
 
 /**
- * Three numbers in the hero. Keep them true and keep them checkable —
- * these are the first things someone will ask about.
+ * Numbers in the hero. Both of these are checkable, which is the
+ * only kind worth putting on a portfolio — the first question an
+ * interviewer asks about a number is where it came from.
  */
 export const headlineStats = [
   { value: "9", suffix: "+", label: "years in marketing & design" },
-  { value: "TODO", label: "projects delivered" },
-  { value: "13", label: "disciplines, one designer" },
+  { value: "11", label: "projects on this site" },
 ];
 
 export const experience: Role[] = [
@@ -85,9 +65,9 @@ export const experience: Role[] = [
     title: "Graphic Designer",
     period: "2020 – Present",
     highlights: [
-      "Designed case studies, executive summaries, and presentations for Versa Marketing and Answeron, turning client-provided content into brand-aligned materials.",
-      "Created ad graphics and menu designs for Pepper's Grill across print and digital.",
-      "Developed logo design, investor pitch decks, and executive summaries for NYX.AI, establishing the brand's foundational visuals.",
+      "Built the NYX.AI identity from the mark outward — logo system, brand foundations, and the investor materials that carried the first conversations.",
+      "Designed case studies, executive summaries and presentations for Versa Marketing and Answeron, turning client-provided content into brand-aligned material.",
+      "Created menu systems and advertising for Pepper's Grill across print and digital.",
     ],
   },
   {
@@ -95,15 +75,14 @@ export const experience: Role[] = [
     title: "Digital Marketing & Media Specialist",
     period: "2017 – Present",
     highlights: [
-      "Plan and execute campaigns across paid advertising, email, web, social, and CRM.",
-      "Design and build responsive webpages using AI-assisted development workflows, taking marketing concepts from visual design to functional site.",
-      "Develop B2B materials including sponsorship decks, partnership proposals, and co-branded campaigns.",
-      "Create graphics, photography, and video for advertising, social, events, and campaigns.",
+      "Own event campaigns end to end — concept and messaging through medals, bibs, signage, apparel, social and film.",
+      "Plan and run campaigns across paid, email, web, social and CRM.",
+      "Design and build responsive webpages using AI-assisted development, taking a marketing concept from layout to working site.",
+      "Produce the graphics, photography and video behind advertising, social, events and campaigns.",
     ],
   },
 ];
 
-/** TODO — trim this to what you want to be hired for, not everything you can do. */
 export const skills: SkillGroup[] = [
   {
     category: "Design",
@@ -139,10 +118,10 @@ export const skills: SkillGroup[] = [
     category: "Tools",
     items: [
       "Adobe Creative Suite",
+      "Illustrator",
       "Figma",
       "Claude Code",
       "CRM & marketing automation",
-      "TODO — add the rest",
     ],
   },
 ];
