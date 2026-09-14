@@ -99,23 +99,20 @@ export const work: Piece[] = [
     role: "Identity design",
     cover: {
       src: "/work/nyx-ai-identity/cover.jpg",
-      alt: "NYX.AI logo lockup: a black owl with a full wingspan above the NYX wordmark in cyan",
+      alt: "NYX lockup in cyan: an owl with a full wingspan above the NYX wordmark, set on a dark ground",
     },
     gallery: [
       {
         src: "/work/nyx-ai-identity/gallery-1.jpg",
-        alt: "NYX.AI lockup in cyan on a dark ground",
-        caption: "Light lockup, for dark applications.",
+        alt: "The NYX lockup reversed in solid white on a dark ground",
+        caption:
+          "Reversed to a single solid white — the version that has to survive one-colour printing and anything embroidered.",
       },
       {
         src: "/work/nyx-ai-identity/gallery-2.jpg",
-        alt: "NYX.AI owl mark alone in cyan",
-        caption: "The mark on its own — it has to work without the wordmark.",
-      },
-      {
-        src: "/work/nyx-ai-identity/gallery-3.jpg",
-        alt: "NYX.AI owl mark in white with cyan eyes and chest detail",
-        caption: "Two-colour cutout version for single-colour printing.",
+        alt: "The NYX lockup with a black owl carrying cyan eyes, brows and beak, above the NYX wordmark in cyan, on a light ground",
+        caption:
+          "The light-ground version. The owl goes black and the cyan pulls back to the eyes, the brows and the beak.",
       },
     ],
     tags: ["Logo design", "Brand foundations", "Illustrator"],
