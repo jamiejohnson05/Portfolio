@@ -214,7 +214,6 @@ export const work: Piece[] = [
     client: "Cerus Fitness",
     year: "2023",
     categories: ["promotional"],
-    featured: true,
     summary:
       "A sherbet gradient run through an outlined wordmark, to see how far the brand would stretch.",
     role: "Apparel design",
@@ -284,6 +283,7 @@ export const work: Piece[] = [
     client: "Cerus Fitness",
     year: "2025",
     categories: ["posters", "calendars"],
+    featured: true,
     summary:
       "A whole competition year on one sheet — nine events, twelve months, and a QR code so nobody has to write anything down.",
     role: "Design",
