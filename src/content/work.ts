@@ -99,7 +99,7 @@ export const work: Piece[] = [
     role: "Identity design",
     cover: {
       src: "/work/nyx-ai-identity/cover.jpg",
-      alt: "NYX lockup in cyan: an owl with a full wingspan above the NYX wordmark, set on a dark ground",
+      alt: "NYX lockup in cyan: an owl with a full wingspan above the NYX wordmark, its eyes and feather detail knocked out so the ground shows through",
     },
     gallery: [
       {
