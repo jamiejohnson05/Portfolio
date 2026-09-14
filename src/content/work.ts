@@ -499,18 +499,24 @@ export const work: Piece[] = [
     role: "Apparel design",
     cover: {
       src: "/work/ombre-smiley-dumbbell/cover.jpg",
-      alt: "Apparel graphic: a smiling kettlebell with a lightning bolt, on a checkerboard panel with a peach-to-teal gradient and the Cerus Fitness banner",
+      alt: "Apparel graphic: a smiling kettlebell with lightning-bolt eyes over a pastel checkerboard, above the Cerus Fitness banner and the bull mark, the whole thing outlined in a pink-to-yellow-to-teal gradient",
     },
     gallery: [
       {
         src: "/work/ombre-smiley-dumbbell/gallery-1.jpg",
+        alt: "The graphic printed on a black cropped hooded tank, worn by a model",
+        caption:
+          "On the garment. The gradient outline is what makes it hold together on black — the kettlebell body is the shirt showing through.",
+      },
+      {
+        src: "/work/ombre-smiley-dumbbell/gallery-2.jpg",
         alt: "The same smiley kettlebell graphic rendered in solid black line work",
         caption: "Where it started — solid black, no gradient.",
       },
       {
-        src: "/work/ombre-smiley-dumbbell/gallery-2.jpg",
+        src: "/work/ombre-smiley-dumbbell/gallery-3.jpg",
         alt: "Teal and peach version of the smiley kettlebell graphic",
-        caption: "Teal and peach colourway.",
+        caption: "Teal and peach colourway, partway through.",
       },
     ],
     tags: ["Apparel", "Illustration", "Colour study", "Illustrator"],
