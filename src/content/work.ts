@@ -503,13 +503,13 @@ export const work: Piece[] = [
     role: "Apparel design",
     cover: {
       src: "/work/cerus-athlete-tee/cover.jpg",
-      alt: "Three members in the gym wearing the black Cerus Fitness Athlete tee, the neon print visible on all three",
+      alt: "Athlete tee artwork: CERUS FITNESS in chrome-blue block capitals over a magenta wireframe grid, ATHLETE brushed across it in pink, a fist pressing a kettlebell at the centre, and UNSTOPPABLE / COLORADO 2026 along the base",
     },
     gallery: [
       {
         src: "/work/cerus-athlete-tee/gallery-1.jpg",
-        alt: "Full frame of three members side by side in the gym wearing the 2026 athlete tee",
-        caption: "On the floor at Cerus, printed and worn.",
+        alt: "Three members side by side in the gym, all wearing the printed 2026 athlete tee",
+        caption: "Printed and worn. Drawn for black, which is the only ground it works on.",
       },
     ],
     tags: ["Apparel", "Lettering", "Retro", "Event merch"],
