@@ -493,6 +493,29 @@ export const work: Piece[] = [
   },
 
   {
+    slug: "cerus-athlete-tee",
+    title: "Athlete Tee 2026",
+    client: "Cerus Fitness",
+    year: "2026",
+    categories: ["promotional"],
+    summary:
+      "Chrome lettering over a magenta wireframe horizon, with a fist pressing a kettlebell at the centre — the 2026 athlete tee.",
+    role: "Apparel design",
+    cover: {
+      src: "/work/cerus-athlete-tee/cover.jpg",
+      alt: "Three members in the gym wearing the black Cerus Fitness Athlete tee, the neon print visible on all three",
+    },
+    gallery: [
+      {
+        src: "/work/cerus-athlete-tee/gallery-1.jpg",
+        alt: "Full frame of three members side by side in the gym wearing the 2026 athlete tee",
+        caption: "On the floor at Cerus, printed and worn.",
+      },
+    ],
+    tags: ["Apparel", "Lettering", "Retro", "Event merch"],
+  },
+
+  {
     slug: "cerus-arena",
     title: "Cerus Arena",
     client: "Cerus Fitness",
