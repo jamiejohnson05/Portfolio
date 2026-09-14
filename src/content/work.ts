@@ -142,6 +142,12 @@ export const work: Piece[] = [
     gallery: [
       {
         src: "/work/trilogy-medal/gallery-1.jpg",
+        alt: "Promotional graphic reading EARN YOUR TRILOGY, with arrows labelling the three segments of the assembled medal as Gym Series in green, Race Series in blue and Brix Series in yellow",
+        caption:
+          "The promo that explains the system. Each series earns one segment, and the three only make a hexagon together.",
+      },
+      {
+        src: "/work/trilogy-medal/gallery-2.jpg",
         alt: "Two versions of the assembled trilogy medal shown together for comparison",
         caption: "Two of the fourteen versions it took to get the split right.",
       },
