@@ -678,13 +678,24 @@ export const work: Piece[] = [
     role: "Mark design",
     cover: {
       src: "/work/cerusbrix-athlete/cover.jpg",
-      alt: "CerusBrix ATHLETE lockup: the faceted bull mark beside dimensional block lettering in navy and yellow",
+      alt: "CerusBrix ATHLETE lockup in grey and yellow: the faceted bull mark, a dividing rule, and dimensional block lettering edged in yellow, with a star-ringed X emblem above",
     },
     gallery: [
       {
         src: "/work/cerusbrix-athlete/gallery-1.jpg",
+        alt: "A member carrying a slam ball on her shoulder in the gym, wearing the navy Athlete tee with the lockup printed in red and white",
+        caption:
+          "On the floor, printed on navy. The lockup is built so the bull and the word can take a different pair of colours each run.",
+      },
+      {
+        src: "/work/cerusbrix-athlete/gallery-2.jpg",
+        alt: "The CerusBrix Athlete lockup in navy and yellow",
+        caption: "Navy and yellow.",
+      },
+      {
+        src: "/work/cerusbrix-athlete/gallery-3.jpg",
         alt: "The CerusBrix Athlete lockup in a red and white colourway",
-        caption: "Red and white, one of about twelve.",
+        caption: "Red and white. About twelve colourways ran in all.",
       },
     ],
     tags: ["Lettering", "Sub-brand", "Apparel", "Illustrator"],
