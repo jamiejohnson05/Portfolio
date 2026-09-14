@@ -720,6 +720,68 @@ export const work: Piece[] = [
     ],
     tags: ["Lettering", "Sub-brand", "Apparel", "Illustrator"],
   },
+
+  {
+    slug: "cerusbrix-championship-tees",
+    title: "CerusBrix Championship Tees",
+    client: "Cerus Fitness",
+    year: "2022 – 2025",
+    categories: ["promotional"],
+    summary:
+      "Personalised competition apparel: one template, a surname and a number swapped per athlete, redrawn each year of the championships.",
+    role: "Apparel design",
+    cover: {
+      src: "/work/cerusbrix-championship-tees/cover.jpg",
+      alt: "A competitor in a black CerusBrix Championship 2023 tank printed THOMAS 02 in green, laughing as she walks back from a barbell, with two more competitors in SCREERY 03 and MORGAN tanks behind her",
+    },
+    sections: [
+      {
+        heading: "The template",
+        body: [
+          "Every athlete in the championships gets their own shirt. That only works if the artwork is a template rather than a drawing — so the 2025 design is built with two variable slots and everything else locked: the surname across the base of the arch, and the competitor number in a tab at each lower corner.",
+          "The fixed part is an arched CERUSBRIX CHAMPIONSHIPS lockup over a wireframe grid, the faceted bull above the CerusBrix wordmark, year tabs at the shoulders, and one line along the bottom — EARN YOUR SPOT. PROVE IT ON THE FLOOR.",
+          "It prints in two inks on black: gold for the mark and the wordmark, off-white for the type and the linework. Setting it that way means the surname and the number are the only things that change between one athlete's file and the next.",
+        ],
+      },
+      {
+        heading: "Across four years",
+        body: [
+          "The championships ran the personalised shirts from 2022 through 2025, and the design was redrawn each year rather than reissued. The 2022 run put the surname in a stacked block with the year underneath; by 2025 it had become the arch-and-grid layout. What carried across was the rule, not the look — one athlete, one name, one number.",
+          "The 2025 artwork set holds a separate file for every competitor, twenty-two named athletes in that year alone. Women's cuts ran as tanks, men's as tees, off the same layout.",
+        ],
+      },
+    ],
+    gallery: [
+      {
+        src: "/work/cerusbrix-championship-tees/gallery-1.jpg",
+        alt: "The 2025 championship tee artwork on black: an arched CERUSBRIX CHAMPIONSHIPS lockup over a wireframe grid, a gold faceted bull above the CerusBrix wordmark, the surname LONGDEN across the base, 04 in tabs at both lower corners, and the line EARN YOUR SPOT. PROVE IT ON THE FLOOR.",
+        caption:
+          "The 2025 template, set for one athlete. LONGDEN and 04 are the only two things that change between files.",
+      },
+      {
+        src: "/work/cerusbrix-championship-tees/gallery-2.jpg",
+        alt: "A competitor mid-deadlift in the black 2025 championship tee, printed REICHERT with 03 in the corner tab",
+        caption: "The same template printed and on the floor, set for REICHERT, 03.",
+      },
+      {
+        src: "/work/cerusbrix-championship-tees/gallery-3.jpg",
+        alt: "Six competitors with arms around each other in front of the sponsor wall, each in a CerusBrix Championships tee printed with their own surname down the front — WILSON, YOUNG, JOHNSON, WARFEL, TRUXAL and REICHERT",
+        caption: "Six shirts, six names, one layout. This is the whole point of building it as a template.",
+      },
+      {
+        src: "/work/cerusbrix-championship-tees/gallery-4.jpg",
+        alt: "Two competitors pressing loaded barbells overhead in the gym, the nearer one in a black tank printed 03 EARN YOUR SPOT in green",
+        caption: "The women's cut ran as a tank off the same layout.",
+      },
+      {
+        src: "/work/cerusbrix-championship-tees/gallery-5.jpg",
+        alt: "Three competitors on a podium with medals, in black 2022 championship tees printed DIFAZIO, DOWNEY and GILBERT above CERUSBRIX CHAMPIONSHIPS 2022",
+        caption:
+          "2022, the first run — surname stacked over the year. Same rule, a different drawing.",
+      },
+    ],
+    tags: ["Apparel", "Template system", "Event merch", "Two-colour print", "Illustrator"],
+  },
 ];
 
 /* ── Helpers. No need to edit below here. ───────────────────── */
