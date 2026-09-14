@@ -185,6 +185,21 @@ export const work: Piece[] = [
     gallery: [
       {
         src: "/work/mountain-athlete/gallery-1.jpg",
+        alt: "Navy tee mockup carrying the Cerus Athlete mountain graphic in white",
+        caption: "Navy. The ridge line is cut out of the letters, so the shirt colour is the mountain.",
+      },
+      {
+        src: "/work/mountain-athlete/gallery-2.jpg",
+        alt: "Olive tee mockup carrying the Cerus Athlete mountain graphic in black",
+        caption: "Olive, printed in black.",
+      },
+      {
+        src: "/work/mountain-athlete/gallery-3.jpg",
+        alt: "Black tee mockup carrying the Cerus Athlete mountain graphic in grey",
+        caption: "Black on black, grey ink.",
+      },
+      {
+        src: "/work/mountain-athlete/gallery-4.jpg",
         alt: "Rectangle-framed version of the Cerus Athlete mountain graphic in solid black",
         caption: "Framed version, one of four colourways.",
       },
@@ -689,11 +704,16 @@ export const work: Piece[] = [
       },
       {
         src: "/work/cerusbrix-athlete/gallery-2.jpg",
+        alt: "Black and white photograph of three members standing in the gym, all wearing the black Athlete tee",
+        caption: "The black run, on the floor at Cerus.",
+      },
+      {
+        src: "/work/cerusbrix-athlete/gallery-3.jpg",
         alt: "The CerusBrix Athlete lockup in navy and yellow",
         caption: "Navy and yellow.",
       },
       {
-        src: "/work/cerusbrix-athlete/gallery-3.jpg",
+        src: "/work/cerusbrix-athlete/gallery-4.jpg",
         alt: "The CerusBrix Athlete lockup in a red and white colourway",
         caption: "Red and white. About twelve colourways ran in all.",
       },
