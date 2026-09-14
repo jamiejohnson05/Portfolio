@@ -61,6 +61,13 @@ export const categories: Category[] = [
       "One message carried across paid, email, social, print, and whatever the landing page needed to be.",
   },
   {
+    id: "email-design",
+    label: "Email Design",
+    group: "Marketing",
+    blurb:
+      "HTML email built to survive real inboxes — hierarchy that reads before the images load, and one clear thing to do next.",
+  },
+  {
     id: "go-to-market",
     label: "Go-to-Market Planning",
     group: "Marketing",

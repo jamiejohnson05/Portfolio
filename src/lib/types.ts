@@ -16,6 +16,7 @@ export type CategoryId =
   | "look-books"
   // Marketing
   | "campaigns"
+  | "email-design"
   | "go-to-market"
   | "pitch-decks"
   | "presentations"

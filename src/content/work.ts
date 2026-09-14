@@ -228,6 +228,67 @@ export const work: Piece[] = [
   /* ── The rest ─────────────────────────────────────────────── */
 
   {
+    slug: "cerus-brix-open-email",
+    title: "Brix Open Registration Deadline Email",
+    client: "Cerus Fitness",
+    year: "2026",
+    categories: ["email-design", "campaigns"],
+    summary:
+      "A deadline-driven HTML email that converted fence-sitters before registration closed, without leaning on discount-gym urgency tactics.",
+    role: "Email design & copywriting",
+    cover: {
+      src: "/work/cerus-brix-open-email/cover.jpg",
+      alt: "Top of the Brix Open 2026 email: the green Cerus bull mark on black above a lime banner reading REGISTRATION CLOSING SOON, BRIX OPEN 2026, and the competition dates, over a photo of athletes pressing dumbbells overhead",
+    },
+    sections: [
+      {
+        heading: "The Brief",
+        body: [
+          "Cerus Fitness runs a full calendar of competitive hybrid-fitness events throughout the year. Registration for the Brix Open, one of the season's marquee competitions, was closing in days. The goal was a single email that would convert fence-sitters before the deadline, without leaning on generic urgency tactics or discount-gym energy.",
+        ],
+      },
+      {
+        heading: "The Approach",
+        body: [
+          "Led with the deadline, not the sell. A dedicated deadline callout sits above the fold, with supporting copy that removes any ambiguity about when registration actually closes.",
+          "Built a visual competition timeline so recipients could see the full arc of the event — Brix Open, Semi-Finals, Championships — in one glance, reinforcing that this is a real season with stakes, not a one-off signup.",
+          "Cross-promoted upcoming events below the primary CTA (Cerox Iron + Iron X, Cerus Knocks Out Addiction) to keep engaged members moving deeper into the event calendar rather than dropping off after one registration.",
+          "Used scarcity honestly — “Only 100 tickets available” appears once, tied to a real ticketed event, rather than repeated throughout the email.",
+        ],
+      },
+      {
+        heading: "Design System",
+        body: [
+          "Dark theme (#1a1a1a / #111) with Cerus green (#8DC63F) as the single accent color, used consistently for CTAs, dates, and highlights.",
+          "Bold, uppercase headers for scannability at a glance.",
+          "Card-based layout for secondary events, keeping the email modular and easy to extend for future sends.",
+          "Built as a self-contained HTML file, ready to drop into any ESP with minimal setup.",
+        ],
+      },
+      {
+        heading: "Result",
+        body: [
+          "A clean, on-brand deadline email that reads as coaching energy rather than a discount push — consistent with Cerus's broader positioning as a premium, community-first gym rather than a big-box competitor.",
+        ],
+      },
+    ],
+    gallery: [
+      {
+        src: "/work/cerus-brix-open-email/gallery-1.jpg",
+        alt: "The full Brix Open email from header to footer: banner, hero photo, deadline panel, three-date competition schedule, register button, two upcoming-event cards, and sign-off",
+        caption:
+          "The whole email. The deadline sits in its own panel above the schedule, so the date reads before the detail does.",
+      },
+    ],
+    tags: [
+      "HTML email",
+      "Campaign",
+      "Event marketing",
+      "Responsive",
+    ],
+  },
+
+  {
     slug: "cerus-arena",
     title: "Cerus Arena",
     client: "Cerus Fitness",
