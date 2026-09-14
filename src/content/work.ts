@@ -689,29 +689,6 @@ export const work: Piece[] = [
     ],
     tags: ["Lettering", "Sub-brand", "Apparel", "Illustrator"],
   },
-
-  {
-    slug: "cerus-bull-mark",
-    title: "Cerus Bull Mark",
-    client: "Cerus Fitness",
-    year: "2026",
-    categories: ["logo-design", "promotional"],
-    summary:
-      "The faceted bull, reduced until it still reads at the size of an obstacle wall and a shirt pocket.",
-    role: "Mark design",
-    cover: {
-      src: "/work/cerus-bull-mark/cover.jpg",
-      alt: "The Cerus bull mark in solid black: a faceted, angular bull's head with raised horns",
-    },
-    gallery: [
-      {
-        src: "/work/cerus-bull-mark/gallery-1.jpg",
-        alt: "The Cerus bull mark reversed in white on a dark ground",
-        caption: "Reversed, for dark ground and for vinyl.",
-      },
-    ],
-    tags: ["Logo design", "Mark", "Illustrator"],
-  },
 ];
 
 /* ── Helpers. No need to edit below here. ───────────────────── */
