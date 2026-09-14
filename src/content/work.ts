@@ -38,7 +38,7 @@ export const work: Piece[] = [
     ],
     cover: {
       src: "/work/cerus-fitness-festival/cover.jpg",
-      alt: "Cerus Fitness Festival social ad: a six-photo grid of event moments around the festival lockup and date",
+      alt: "Fitness Festival 5K race bib: the number 100 over a field of running figures, with tear-off strips reading $5 OFF MERCH and 100 BAG CLAIM",
     },
     gallery: [
       {
@@ -69,6 +69,12 @@ export const work: Piece[] = [
         alt: "Race bib for the Fitness Festival 5K with large number and tear-off strips for a merchandise discount and bag claim",
         caption:
           "5K bib. The tear-offs are a $5 merch credit and a bag claim — the number every finisher is already wearing, doing a second job.",
+      },
+      {
+        src: "/work/cerus-fitness-festival/gallery-6.jpg",
+        alt: "Cerus Fitness Festival social ad: a six-photo grid of event moments around the festival lockup and the date",
+        caption:
+          "Social ad. Six moments from the year before, around the lockup — the version that ran in feed.",
       },
     ],
     tags: [
