@@ -388,6 +388,60 @@ export const work: Piece[] = [
   },
 
   {
+    slug: "cerus-sponsor-case-studies",
+    title: "Sponsor Case Studies",
+    client: "Cerus Fitness",
+    year: "2022",
+    categories: ["presentations"],
+    summary:
+      "Two one-page sponsor reports, each turning a year of event attendance, web traffic and social reach into a single readable page.",
+    role: "Case study design",
+    cover: {
+      src: "/work/cerus-sponsor-case-studies/cover.jpg",
+      alt: "Lifetime Windows & Siding case study page: navy layout with the client logo, an overview column, a numbered results block, partner quotes and event photography",
+    },
+    gallery: [
+      {
+        src: "/work/cerus-sponsor-case-studies/gallery-1.jpg",
+        alt: "Full Lifetime Windows & Siding 2022 case study page",
+        caption:
+          "Lifetime Windows & Siding, 2022. Figures down the left, the partner's own words on the right, event photography carrying the rest.",
+      },
+      {
+        src: "/work/cerus-sponsor-case-studies/gallery-2.jpg",
+        alt: "Full Bluebird Botanicals case study page, with digital and in-person reach figures and a numbered list of sponsorship benefits",
+        caption:
+          "Bluebird Botanicals. Digital reach and in-person reach split into their own panel, with the five benefits numbered underneath.",
+      },
+    ],
+    tags: ["Case study", "Sponsorship", "Layout", "Print & digital"],
+  },
+
+  {
+    slug: "nyx-ai-case-study",
+    title: "NYX.AI Growth Case Study",
+    client: "NYX.AI",
+    year: "2025",
+    categories: ["presentations"],
+    summary:
+      "A one-page growth story for a pre-launch SaaS platform, built on the same cyan-and-black system as the investor deck.",
+    role: "Case study design",
+    cover: {
+      src: "/work/nyx-ai-case-study/cover.jpg",
+      alt: "NYX.AI case study page: cyan headline on black over a gym photograph, with overview and problem sections on the left and cyan panels on the right",
+    },
+    gallery: [
+      {
+        src: "/work/nyx-ai-case-study/gallery-1.jpg",
+        alt: "Full NYX.AI case study page covering the overview, the problem, the breakthrough at Cerus Fitness, the retention model and why NYX",
+        caption:
+          "The one-pager. Problem, breakthrough and proof stack down the left; the pitch sits boxed in cyan on the right.",
+      },
+    ],
+    tags: ["Case study", "SaaS", "Layout", "Brand application"],
+  },
+
+  {
     slug: "cerus-arena",
     title: "Cerus Arena",
     client: "Cerus Fitness",
