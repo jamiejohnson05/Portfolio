@@ -26,7 +26,7 @@ export const work: Piece[] = [
     title: "Cerus Fitness Festival",
     client: "Cerus Fitness",
     year: "2023",
-    categories: ["campaigns", "posters", "medal-design", "promotional"],
+    categories: ["campaigns", "medal-design", "promotional"],
     featured: true,
     summary:
       "A two-day community fitness event, carried from the flyer on the wall to the medal in the finisher's hand.",
@@ -269,6 +269,40 @@ export const work: Piece[] = [
       "Signage",
       "Race bib",
       "Video",
+    ],
+  },
+
+  {
+    slug: "cerus-events-2025",
+    title: "2025 Events Poster",
+    client: "Cerus Fitness",
+    year: "2025",
+    categories: ["posters", "calendars"],
+    summary:
+      "A whole competition year on one sheet — nine events, twelve months, and a QR code so nobody has to write anything down.",
+    role: "Design",
+    metrics: [
+      { value: "9", label: "events, one sheet" },
+      { value: "12", label: "months of scheduling" },
+    ],
+    cover: {
+      src: "/work/cerus-events-2025/cover.jpg",
+      alt: "Cerus Fitness 2025 Upcoming Events poster: a zig-zag timeline of nine event dates down the page, each with a photo and a blue chevron date marker",
+    },
+    gallery: [
+      {
+        src: "/work/cerus-events-2025/gallery-1.jpg",
+        alt: "Full 2025 events poster showing each date from Brix Solos in January through Relay Row in December, with a QR code to the events page",
+        caption:
+          "The timeline alternates left and right down the page, so nine dates read as a year rather than a list. Each one carries a photograph from that event, and the Brix Open gets extra lines because it runs across three months.",
+      },
+    ],
+    tags: [
+      "Poster",
+      "Event schedule",
+      "Photography",
+      "Large format",
+      "QR",
     ],
   },
 

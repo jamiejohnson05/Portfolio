@@ -56,7 +56,7 @@ export const profile = {
  */
 export const headlineStats = [
   { value: "9", suffix: "+", label: "years in marketing & design" },
-  { value: "11", label: "projects on this site" },
+  { value: "12", label: "projects on this site" },
 ];
 
 export const experience: Role[] = [
