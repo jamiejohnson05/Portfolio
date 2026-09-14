@@ -289,6 +289,53 @@ export const work: Piece[] = [
   },
 
   {
+    slug: "nyx-ai-investor-deck",
+    title: "NYX.AI Investor Deck",
+    client: "NYX.AI",
+    year: "2025",
+    categories: ["pitch-decks"],
+    summary:
+      "An investor deck for a pre-launch fitness-tech company, where the owl identity's diamond geometry stops being decoration and starts carrying the argument.",
+    role: "Deck design",
+    cover: {
+      src: "/work/nyx-ai-investor-deck/cover.jpg",
+      alt: "NYX.AI investor deck title slide: the black owl mark and cyan NYX wordmark set in a white diamond over a photo of members training, with the headline Maximizing Membership Growth and Engagement for Fitness Studios",
+    },
+    gallery: [
+      {
+        src: "/work/nyx-ai-investor-deck/gallery-1.jpg",
+        alt: "Industry landscape slide: five statistics on gym count, market revenue, membership numbers, retention rate and first-year closures, each with a source link",
+        caption:
+          "The landscape slide. Every figure carries its source — the deck argues from cited numbers rather than assertion.",
+      },
+      {
+        src: "/work/nyx-ai-investor-deck/gallery-2.jpg",
+        alt: "The Problem slide: a large headline over three columns covering member attrition, disengagement in facilities, and lack of sales and monetisation",
+        caption:
+          "The problem, split three ways so it reads at a glance from across a room.",
+      },
+      {
+        src: "/work/nyx-ai-investor-deck/gallery-3.jpg",
+        alt: "The Opportunity slide: three nested diamonds sized to represent total, serviceable and obtainable market, each labelled with its dollar figure",
+        caption:
+          "The diamond from the logo, nested three deep to size the market. The brand mark and the chart are the same shape.",
+      },
+      {
+        src: "/work/nyx-ai-investor-deck/gallery-4.jpg",
+        alt: "Go-to-Market Strategy slide: partner-led growth, strategic integrations and channel partnerships laid out in numbered columns",
+        caption:
+          "Go-to-market. Selected slides only — the financial and team pages are not shown.",
+      },
+    ],
+    tags: [
+      "Pitch deck",
+      "Presentation design",
+      "Data visualisation",
+      "Brand application",
+    ],
+  },
+
+  {
     slug: "cerus-arena",
     title: "Cerus Arena",
     client: "Cerus Fitness",
