@@ -499,14 +499,14 @@ export const work: Piece[] = [
     role: "Apparel design",
     cover: {
       src: "/work/ombre-smiley-dumbbell/cover.jpg",
-      alt: "Apparel graphic: a smiling kettlebell with lightning-bolt eyes over a pastel checkerboard, above the Cerus Fitness banner and the bull mark, the whole thing outlined in a pink-to-yellow-to-teal gradient",
+      alt: "The graphic printed on a black cropped hooded tank, worn by a model",
     },
     gallery: [
       {
         src: "/work/ombre-smiley-dumbbell/gallery-1.jpg",
-        alt: "The graphic printed on a black cropped hooded tank, worn by a model",
+        alt: "Apparel graphic: a smiling kettlebell with lightning-bolt eyes over a pastel checkerboard, above the Cerus Fitness banner and the bull mark, outlined in a pink-to-yellow-to-teal gradient",
         caption:
-          "On the garment. The gradient outline is what makes it hold together on black — the kettlebell body is the shirt showing through.",
+          "The artwork on its own. The gradient outline is what makes it hold together on black — the kettlebell body is the shirt showing through.",
       },
       {
         src: "/work/ombre-smiley-dumbbell/gallery-2.jpg",
