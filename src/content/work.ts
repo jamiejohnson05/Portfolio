@@ -442,6 +442,60 @@ export const work: Piece[] = [
   },
 
   {
+    slug: "cerus-sponsorship-decks",
+    title: "Sponsorship Decks",
+    client: "Cerus Fitness",
+    year: "2022 – 2025",
+    categories: ["pitch-decks"],
+    summary:
+      "The decks that sell Cerus sponsorships — the annual programme, a stadium race, and the tier cards that price them.",
+    role: "Deck design",
+    cover: {
+      src: "/work/cerus-sponsorship-decks/cover.jpg",
+      alt: "Sponsorships 2025 deck cover: a black-and-white photograph of an athlete locking out a barbell overhead, with the Cerus bull and a lime SPONSORSHIPS 2025 block across the lower third",
+    },
+    gallery: [
+      {
+        src: "/work/cerus-sponsorship-decks/gallery-1.jpg",
+        alt: "Series events page listing the Brix, Spartan Deka and Gym series with attendance figures, each event rated large, medium or small",
+        caption:
+          "Series events. Every event rated large, medium or small, so a sponsor can size what they're buying before any price appears.",
+      },
+      {
+        src: "/work/cerus-sponsorship-decks/gallery-2.jpg",
+        alt: "Spartan DEKA partnership page with the DEKA helmet mark, the Cerus and DEKA logos meeting at a plus sign, and the season's event dates",
+        caption:
+          "The Spartan DEKA partnership gets its own page — two marks meeting in the middle, the season's dates underneath.",
+      },
+      {
+        src: "/work/cerus-sponsorship-decks/gallery-3.jpg",
+        alt: "Diamond tier page: an exclusive monthly sponsorship listing booth space, banners, social, email and in-gym placements in two columns",
+        caption:
+          "The Diamond tier. Everything included set in two columns, priced monthly rather than per event.",
+      },
+      {
+        src: "/work/cerus-sponsorship-decks/gallery-4.jpg",
+        alt: "Cerus Arena 2023 deck cover in navy, naming Weidner Field in Colorado Springs and listing the sponsorship placements available",
+        caption:
+          "Cerus Arena, 2023. A stadium race at Weidner Field got its own deck and its own navy palette.",
+      },
+      {
+        src: "/work/cerus-sponsorship-decks/gallery-5.jpg",
+        alt: "Placement page showing a sponsor logo positioned on a medal ribbon and on a tear-off race bib",
+        caption:
+          "Placement shown rather than described — the logo on a medal ribbon, and on the tear-off bib.",
+      },
+      {
+        src: "/work/cerus-sponsorship-decks/gallery-6.jpg",
+        alt: "The 2022 sponsorship deck cover: an athlete hauling a rope, with the Cerus wordmark and a green call-out block",
+        caption:
+          "Where it started, 2022. Same job, heavier green, everything set on black.",
+      },
+    ],
+    tags: ["Pitch deck", "Sponsorship", "Co-branding", "Layout"],
+  },
+
+  {
     slug: "cerus-arena",
     title: "Cerus Arena",
     client: "Cerus Fitness",
