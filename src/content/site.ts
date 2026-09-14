@@ -9,12 +9,10 @@ export const site = {
   description: profile.tagline,
 
   /**
-   * TODO — set this to your real address once Vercel has deployed.
-   * Vercel shows it on the project dashboard; it looks like
-   * "https://portfolio-xyz123.vercel.app" until you add a custom domain.
-   * Used for canonical URLs, the sitemap, and social link previews.
+   * The live address. Used for canonical URLs, the sitemap, and social
+   * link previews. Update this if you add a custom domain.
    */
-  url: "https://example.vercel.app",
+  url: "https://jamiejportfolio.vercel.app",
 
   /** The wordmark in the top-left. Your name, or your initials. */
   logoText: "Jamie Johnson",
