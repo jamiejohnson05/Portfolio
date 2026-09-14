@@ -336,6 +336,41 @@ export const work: Piece[] = [
   },
 
   {
+    slug: "cerus-sponsor-wall",
+    title: "CerusBrix Sponsor Wall",
+    client: "Cerus Fitness",
+    year: "2025",
+    categories: ["banners"],
+    summary:
+      "A step-and-repeat sponsor wall printed on vinyl — the backdrop every podium photograph from the championships is taken against.",
+    role: "Large-format design",
+    cover: {
+      src: "/work/cerus-sponsor-wall/cover.jpg",
+      alt: "Three athletes on the podium at the 2025 CerusBrix Championships holding yellow name plates, standing in front of the printed vinyl sponsor wall",
+    },
+    gallery: [
+      {
+        src: "/work/cerus-sponsor-wall/gallery-1.jpg",
+        alt: "The sponsor wall artwork: Gatorade, Muscle Milk and Rockstar Energy marks tiled across black bands above and below a grey panel carrying the green Cerus bull and the Cerus Fitness wordmark",
+        caption:
+          "The repeat artwork. Sponsor marks tile small across the black bands and sit ghosted at a larger size behind the bull.",
+      },
+      {
+        src: "/work/cerus-sponsor-wall/gallery-2.jpg",
+        alt: "Wider view of the podium: the full vinyl wall behind three championship winners holding their name plates",
+        caption:
+          "The vinyl in use at the 2025 championships. The championship tees and the name plates were part of the same job.",
+      },
+    ],
+    tags: [
+      "Large format",
+      "Vinyl print",
+      "Event signage",
+      "Sponsor branding",
+    ],
+  },
+
+  {
     slug: "cerus-arena",
     title: "Cerus Arena",
     client: "Cerus Fitness",
