@@ -341,6 +341,55 @@ export const work: Piece[] = [
     tags: ["Case study", "Affiliate marketing", "Layout", "Print-ready", "Agency work"],
   },
   {
+    slug: "trilogy-medal",
+    title: "Trilogy Medal",
+    client: "Cerus Fitness",
+    year: "2023",
+    categories: ["medal-design"],
+    featured: true,
+    summary:
+      "Three medals that stand alone and lock together — finish all three series and you have one piece.",
+    role: "Medal design",
+    metrics: [
+      { value: "3", label: "awards in the series" },
+      { value: "1", label: "piece when assembled" },
+    ],
+    cover: {
+      src: "/work/trilogy-medal/cover.jpg",
+      alt: "An assembled Trilogy medal resting against weight plates: a hexagon of green, blue and yellow enamel segments forming the Cerus bull, lettered CERUS FITNESS 2023 TRILOGY around the top edge, on a matching ribbon",
+    },
+    gallery: [
+      {
+        src: "/work/trilogy-medal/gallery-1.jpg",
+        alt: "Two of the finished medals photographed on dark wood with their ribbons and clips",
+        caption:
+          "Two of them side by side. Hard enamel, and the bull only resolves once the three segments sit together.",
+      },
+      {
+        src: "/work/trilogy-medal/gallery-2.jpg",
+        alt: "Promotional graphic reading EARN YOUR TRILOGY, with arrows labelling the three segments of the assembled medal as Gym Series in green, Race Series in blue and Brix Series in yellow",
+        caption:
+          "The promo that explains the system. Each series earns one segment, and the three only make a hexagon together.",
+      },
+      {
+        src: "/work/trilogy-medal/gallery-3.jpg",
+        alt: "Production artwork: the hexagonal medal shown assembled above its three separate segments",
+        caption: "The artwork the factory worked from.",
+      },
+      {
+        src: "/work/trilogy-medal/gallery-4.jpg",
+        alt: "Two versions of the assembled trilogy medal shown together for comparison",
+        caption: "Two of the fourteen versions it took to get the split right.",
+      },
+    ],
+    tags: [
+      "Medal design",
+      "Series design",
+      "Production files",
+      "Illustrator",
+    ],
+  },
+  {
     slug: "nyx-ai-identity",
     title: "NYX.AI Identity",
     client: "NYX.AI",
@@ -447,54 +496,6 @@ export const work: Piece[] = [
 
   /* -- The rest -- */
 
-  {
-    slug: "trilogy-medal",
-    title: "Trilogy Medal",
-    client: "Cerus Fitness",
-    year: "2023",
-    categories: ["medal-design"],
-    summary:
-      "Three medals that stand alone and lock together — finish all three series and you have one piece.",
-    role: "Medal design",
-    metrics: [
-      { value: "3", label: "awards in the series" },
-      { value: "1", label: "piece when assembled" },
-    ],
-    cover: {
-      src: "/work/trilogy-medal/cover.jpg",
-      alt: "An assembled Trilogy medal resting against weight plates: a hexagon of green, blue and yellow enamel segments forming the Cerus bull, lettered CERUS FITNESS 2023 TRILOGY around the top edge, on a matching ribbon",
-    },
-    gallery: [
-      {
-        src: "/work/trilogy-medal/gallery-1.jpg",
-        alt: "Two of the finished medals photographed on dark wood with their ribbons and clips",
-        caption:
-          "Two of them side by side. Hard enamel, and the bull only resolves once the three segments sit together.",
-      },
-      {
-        src: "/work/trilogy-medal/gallery-2.jpg",
-        alt: "Promotional graphic reading EARN YOUR TRILOGY, with arrows labelling the three segments of the assembled medal as Gym Series in green, Race Series in blue and Brix Series in yellow",
-        caption:
-          "The promo that explains the system. Each series earns one segment, and the three only make a hexagon together.",
-      },
-      {
-        src: "/work/trilogy-medal/gallery-3.jpg",
-        alt: "Production artwork: the hexagonal medal shown assembled above its three separate segments",
-        caption: "The artwork the factory worked from.",
-      },
-      {
-        src: "/work/trilogy-medal/gallery-4.jpg",
-        alt: "Two versions of the assembled trilogy medal shown together for comparison",
-        caption: "Two of the fourteen versions it took to get the split right.",
-      },
-    ],
-    tags: [
-      "Medal design",
-      "Series design",
-      "Production files",
-      "Illustrator",
-    ],
-  },
   {
     slug: "cerus-sponsorship-decks",
     title: "Sponsorship Decks",

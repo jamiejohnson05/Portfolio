@@ -61,8 +61,10 @@ because interviewers ask about it.
 - **`alt` is required** on every `Asset`. Describe the content.
 - **Placeholders** are marked `TODO` or `EXAMPLE`. When she supplies real
   content, remove the marker rather than editing around it.
-- **Featured pieces** should number five or six, across different categories.
-  More than that and the homepage stops being a selection.
+- **Featured pieces** currently number **seven**, across different categories.
+  Jamie chose seven deliberately in Sep 2026, so the homepage keeps one
+  craft piece (Trilogy Medal) among the marketing work. Don't trim it back
+  to six without asking her.
 - **Adding a category** means editing both `categories.ts` and the `CategoryId`
   union in `src/lib/types.ts`.
 - **Fonts** load via `<link>` in `src/app/layout.tsx`, not `next/font`, so the
