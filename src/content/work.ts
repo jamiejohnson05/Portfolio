@@ -61,8 +61,19 @@ export const work: Piece[] = [
       },
       {
         src: "/work/cerus-fitness-festival/gallery-4.jpg",
-        alt: "Fitness Festival finisher medal: circular badge with the Cerus bull, brush-script festival wordmark and the Colorado flag",
-        caption: "Finisher medal, round direction — the one that shipped.",
+        alt: "Fitness Festival finisher medal artwork: a rounded rectangular badge with a navy border, the Cerus bull and CERUS in white, FITNESS FESTIVAL in mint brush script, a band of running silhouettes, and the Colorado flag stripe with 2023",
+        caption:
+          "Finisher medal artwork — the rectangular direction, which is the one that got made.",
+      },
+      {
+        src: "/work/cerus-fitness-festival/gallery-7.jpg",
+        alt: "Three finished Fitness Festival medals in enamel, on mint and black printed lanyards, resting against a kettlebell and weight plates",
+        caption: "The finished medals, with the printed lanyards.",
+      },
+      {
+        src: "/work/cerus-fitness-festival/gallery-8.jpg",
+        alt: "Three young runners standing on the podium in front of the sponsor wall, each wearing a Fitness Festival medal on a mint lanyard",
+        caption: "On the podium at the festival, worn.",
       },
       {
         src: "/work/cerus-fitness-festival/gallery-5.jpg",
