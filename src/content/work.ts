@@ -364,6 +364,138 @@ export const work: Piece[] = [
   /* -- The rest -- */
 
   {
+    slug: "cerus-startengine-raise",
+    title: "StartEngine Equity Raise",
+    client: "Cerus Fitness",
+    year: "2024",
+    categories: ["campaigns", "email-design"],
+    summary:
+      "The campaign around a Regulation Crowdfunding raise — thirteen investor updates, an eight-email sequence, and the ads that ran on social and on the gym's own screens.",
+    role: "Campaign copywriting, email & social",
+    metrics: [
+      { value: "107,008", prefix: "$", label: "raised on StartEngine" },
+      { value: "104", label: "investors" },
+      { value: "13", label: "investor updates" },
+      { value: "8", label: "emails in the sequence" },
+    ],
+    externalUrl: {
+      label: "The offering on StartEngine",
+      href: "https://www.startengine.com/offering/cerusfitness",
+    },
+    cover: {
+      src: "/work/cerus-startengine-raise/cover.jpg",
+      alt: "In-gym advertisement for the raise: members rowing above a black band reading INVEST TODAY, STARTING AS LOW AS $248, with the Cerus app on a phone, a QR code, and the StartEngine and Cerus Fitness marks",
+    },
+    sections: [
+      {
+        heading: "The raise",
+        body: [
+          "Cerus Fitness ran a Regulation Crowdfunding offering on StartEngine through the autumn of 2024, open to US investors, priced at a $5 million valuation with a minimum investment of $247.68. It closed on 3 December 2024 having raised $107,008 from 104 investors.",
+          "I wrote the campaign that ran alongside it — the investor updates on the offering page, the email sequence to members and to the wider list, and the advertising that ran on social and inside the gym.",
+        ],
+      },
+      {
+        heading: "The email sequence",
+        body: [
+          "Eight emails, and the order of them is the argument. The first two announce it: one to members who already train at Cerus and are being asked to own a piece of the place they already spend their week in, and one to the wider list. That second email stops to explain what equity crowdfunding actually is, because most of the list had never bought a share in anything.",
+          "The middle of the sequence runs on incentive and social proof — early-bird perks first, then a public target of a hundred investors, then a follow-up admitting the campaign was twenty-five short of it. Asking people to help close a visible gap is a different request from asking them to invest, and it converts differently.",
+          "The last three are the deadline: ten days, seven days, sixteen hours. The urgency there is not a device. A Reg CF offering has a fixed close date set by the filing, and after 3 December the page stopped taking money. The raise finished on 104 investors — four past the number the campaign had spent a month asking people to help reach.",
+        ],
+      },
+      {
+        heading: "The updates",
+        body: [
+          "Thirteen updates went up on the offering page over the life of the campaign. An open raise is a slow sell: most people who eventually invest do not invest the first time they look, so the updates are the drumbeat that keeps the page worth coming back to.",
+          "They are still published on StartEngine, under the link above.",
+        ],
+      },
+      {
+        heading: "Social and in-gym",
+        body: [
+          "The advertising ran on one lockup — INVEST IN CERUS over a torn black band, set on photographs of real members on the floor — across about thirty square posts and a set of vertical story and reel cuts.",
+          "A second, wordier set carried the Cerus app, the StartEngine co-brand and the entry price, for the people who wanted the detail before they clicked. The same artwork ran on the screens on the gym's rowers and treadmills, which put the ask in front of exactly the audience the first email was written for.",
+        ],
+      },
+    ],
+    gallery: [
+      {
+        src: "/work/cerus-startengine-raise/gallery-1.jpg",
+        alt: "Email one, headed BIG NEWS: A Special Opportunity for Our Cerus Family — Own a Piece of Our Growth, with sections explaining why the gym is raising and what happens next, and an INVEST HERE button",
+        caption:
+          "Email one, to members. It opens on the gym rather than the offering — the HIIT class, the personal training, the friendships — and gets to the raise once it has established who is asking.",
+      },
+      {
+        src: "/work/cerus-startengine-raise/gallery-2.jpg",
+        alt: "Email two, headed BIG NEWS: Redefine Fitness with Us — Own a Piece of Cerus Fitness, including a section headed What is Equity Crowdfunding?",
+        caption:
+          "Email two, to the wider list. The extra section is the one headed What is Equity Crowdfunding — you cannot ask a stranger to buy a share without saying what a share is.",
+      },
+      {
+        src: "/work/cerus-startengine-raise/gallery-3.jpg",
+        alt: "Email three, headed INVEST TODAY: Unlock Exclusive Early Bird Perks by Investing in Cerus Fitness Today, with an INVEST NOW FOR EARLY BIRD INCENTIVES button",
+        caption: "Early-bird perks, and a reason to act now rather than later.",
+      },
+      {
+        src: "/work/cerus-startengine-raise/gallery-4.jpg",
+        alt: "Email four, with a banner reading INVEST IN CERUS, HELP US REACH 100, headed Be One of the 100 — Every Contribution Counts",
+        caption:
+          "The milestone email. A hundred investors unlocked promotion to StartEngine's own audience, which turns a private ask into a shared goal with a reward attached.",
+      },
+      {
+        src: "/work/cerus-startengine-raise/gallery-5.jpg",
+        alt: "Email five, banner reading INVEST IN CERUS, HELP US REACH 100, headed We're Almost There — Help Us Reach 100 Investors",
+        caption:
+          "Twenty-five short, and saying so. The number moving is the story — a progress bar people can see themselves in.",
+      },
+      {
+        src: "/work/cerus-startengine-raise/gallery-6.jpg",
+        alt: "Email six, banner reading INVEST TODAY, ONLY 10 DAYS LEFT, with a red and black graphic reading ONLY 10 DAYS LEFT and a list of company milestones",
+        caption: "Ten days out, the sequence turns to the clock.",
+      },
+      {
+        src: "/work/cerus-startengine-raise/gallery-7.jpg",
+        alt: "Email seven, banner reading 7 DAYS LEFT, with a large graphic reading 7 DAYS LEFT over a photo of members training and an INVEST NOW button",
+        caption: "Seven days. Shorter email, bigger number.",
+      },
+      {
+        src: "/work/cerus-startengine-raise/gallery-8.jpg",
+        alt: "Email eight, banner reading INVEST IN CERUS, LAST CHANCE, headed LAST CHANCE TO INVEST, noting sixteen hours remaining",
+        caption:
+          "The last one, with sixteen hours on it. Four sentences and three ways to click — there is nothing left to explain by this point.",
+      },
+      {
+        src: "/work/cerus-startengine-raise/gallery-9.jpg",
+        alt: "In-gym advertisement: members rowing above a black band reading INVEST TODAY, STARTING AS LOW AS $248, with the Cerus app on a phone, a QR code and the StartEngine and Cerus marks",
+        caption:
+          "The in-gym version, built for the screens on the rowers and treadmills. A QR code works in a room where nobody is holding a laptop.",
+      },
+      {
+        src: "/work/cerus-startengine-raise/gallery-10.jpg",
+        alt: "Square social ad: a large group of members running through the gym, under the INVEST IN CERUS lockup on a torn black band with the line Join the Fitness Movement",
+        caption:
+          "The template. One lockup, one line, and a different photograph of real members each time — about thirty of them ran.",
+      },
+      {
+        src: "/work/cerus-startengine-raise/gallery-11.jpg",
+        alt: "Square social ad reading INVEST IN CERUS, STARTING AS LOW AS $248, with the Cerus app shown on a phone, a photograph of a member pulling a rope, and the StartEngine mark",
+        caption:
+          "The wordier cut, for people who wanted the entry price and the product before they clicked.",
+      },
+      {
+        src: "/work/cerus-startengine-raise/gallery-12.jpg",
+        alt: "Vertical story-format ad for the raise, sized for Instagram stories and reels",
+        caption: "Story and reel format, off the same lockup.",
+      },
+    ],
+    tags: [
+      "Copywriting",
+      "Email sequence",
+      "Equity crowdfunding",
+      "Social ads",
+      "Mailchimp",
+    ],
+  },
+  {
     slug: "cerus-sponsorship-decks",
     title: "Sponsorship Decks",
     client: "Cerus Fitness",
