@@ -38,7 +38,7 @@ export const work: Piece[] = [
     ],
     cover: {
       src: "/work/cerus-fitness-festival/cover.jpg",
-      alt: "Fitness Festival 5K race bib: the number 100 over a field of running figures, with tear-off strips reading $5 OFF MERCH and 100 BAG CLAIM",
+      alt: "Mockup of three Fitness Festival finisher medals in enamel, on printed mint-and-black lanyards, resting on a gym floor beside a kettlebell",
     },
     gallery: [
       {
@@ -67,8 +67,9 @@ export const work: Piece[] = [
       },
       {
         src: "/work/cerus-fitness-festival/gallery-7.jpg",
-        alt: "Three finished Fitness Festival medals in enamel, on mint and black printed lanyards, resting against a kettlebell and weight plates",
-        caption: "The finished medals, with the printed lanyards.",
+        alt: "Mockup of three Fitness Festival medals in enamel, on mint and black printed lanyards, resting against a kettlebell and weight plates",
+        caption:
+          "Product mockup, generated from the production artwork — the enamel, the bevel and the printed lanyard visualised.",
       },
       {
         src: "/work/cerus-fitness-festival/gallery-8.jpg",
