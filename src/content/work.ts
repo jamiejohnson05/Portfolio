@@ -582,6 +582,53 @@ export const work: Piece[] = [
     tags: ["Case study", "SaaS", "Layout", "Brand application"],
   },
   {
+    slug: "versa-case-studies",
+    title: "Versa Marketing Case Studies",
+    client: "Versa Marketing",
+    year: "2025",
+    categories: ["presentations"],
+    summary:
+      "Three case-study layouts for affiliate marketing agency Versa Marketing — the numbers are their client results, the pages are the design job.",
+    role: "Case study design",
+    cover: {
+      src: "/work/versa-case-studies/cover.jpg",
+      alt: "Versa Marketing Amazon Prime Day case study, page one: a purple header carrying the Versa script logo and the headline VERSA MARKETING DRIVES AMAZING AMAZON PRIME DAY RESULTS, over two columns of copy, a diagram of client logos and a pull quote",
+    },
+    gallery: [
+      {
+        src: "/work/versa-case-studies/gallery-1.jpg",
+        alt: "Amazon Prime Day case study page one: purple header and headline, a photograph of three people at a screen, columns headed THE OPPORTUNITY and VERSA'S STRATEGY FOR PRIME DAY SUCCESS, a diamond network diagram linking client logos to result figures, and a KEY INITIATIVES list",
+        caption:
+          "Prime Day, page one. The client logos hang off the Versa mark on a diamond network, each tagged with its own figure, so the spread of the programme reads before any of the copy does.",
+      },
+      {
+        src: "/work/versa-case-studies/gallery-2.jpg",
+        alt: "Amazon Prime Day case study page two, headed THE RESULTS PRIME DAY HIGHLIGHTS: two large stat tiles reading 65X GROWTH and 294M REACH, a client quote, five rows of brands with ticked result figures, and two teal-headed panels",
+        caption:
+          "Page two is the results page. Five clients down the left, their figures ticked off beside them — and where a brand could not be named it runs as PREMIUM BEAUTY BRAND or ELECTRONICS BRAND instead.",
+      },
+      {
+        src: "/work/versa-case-studies/gallery-3.jpg",
+        alt: "Grace & Stella case study page one: the headline How Versa Marketing used Levanta to grow sales for their client, Grace & Stella, with a product traffic panel, body copy and two pull quotes",
+        caption:
+          "Grace & Stella, page one. Built around the agency's work on the Levanta platform, with the brand lead and Levanta's CEO both quoted.",
+      },
+      {
+        src: "/work/versa-case-studies/gallery-4.jpg",
+        alt: "Grace & Stella case study page two: a Sustainable Amazon Success donut diagram, a line chart of Amazon sales rank across 2023, a quote from Versa's co-founder, three columns of benefits, and three stat tiles reading 520 to 28 Sales Rank Position, $356,881 Affiliate Sales Total and 362,384 Product Clicks",
+        caption:
+          "Page two carries the proof: a sales-rank chart sourced from Keepa and cited as such, and three figures set large along the base.",
+      },
+      {
+        src: "/work/versa-case-studies/gallery-5.jpg",
+        alt: "Bio Ionic case study on one page: a purple header with a model using a hair straightener and the headline Beauty Brand, Bio Ionic, Sees 6,000% Growth With Content Sites And Influencers, a QUICK INTRO strip, challenge and solution columns, a client quote, and stat tiles reading $900,000 Annual Revenue and 6,000% Revenue Growth",
+        caption:
+          "Bio Ionic, the whole story on one side. A QUICK INTRO strip across the top answers client, industry and programme before the reader commits to the columns.",
+      },
+    ],
+    tags: ["Case study", "Affiliate marketing", "Layout", "Print-ready", "Agency work"],
+  },
+  {
     slug: "cerus-athlete-tee",
     title: "Athlete Tee 2026",
     client: "Cerus Fitness",
