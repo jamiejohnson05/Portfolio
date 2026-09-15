@@ -247,7 +247,7 @@ export const work: Piece[] = [
     slug: "cerusbrix-championship-tees",
     title: "CerusBrix Championship Tees",
     client: "Cerus Fitness",
-    year: "2022 – 2025",
+    year: "2022 – 2026",
     categories: ["promotional"],
     featured: true,
     summary:
@@ -267,10 +267,11 @@ export const work: Piece[] = [
         ],
       },
       {
-        heading: "Across four years",
+        heading: "Across five years",
         body: [
-          "The championships ran the personalised shirts from 2022 through 2025, and the design was redrawn each year rather than reissued. The 2022 run put the surname in a stacked block with the year underneath; by 2025 it had become the arch-and-grid layout. What carried across was the rule, not the look — one athlete, one name, one number.",
-          "The 2025 artwork set holds a separate file for every competitor, twenty-two named athletes in that year alone. Women's cuts ran as tanks, men's as tees, off the same layout.",
+          "The championships have run the personalised shirts from 2022 through 2026, and the design is redrawn each year rather than reissued. The 2022 run put the surname in a stacked block with the year underneath. By 2025 it had become the arch-and-grid layout in gold and off-white. The 2026 drawing throws all of that out — a burst of orange behind a dumbbell, a kettlebell and a plate, with the name and number on a ribbon banner across the middle.",
+          "What carries across is the rule, not the look: one athlete, one surname, one number, and a layout that can absorb both without being redrawn per person.",
+          "Each year's artwork set holds a separate file for every competitor — twenty-two named athletes in 2025, fifteen in 2026. Women's cuts ran as tanks, men's as tees, off the same layout.",
         ],
       },
     ],
@@ -285,6 +286,17 @@ export const work: Piece[] = [
         src: "/work/cerusbrix-championship-tees/gallery-2.jpg",
         alt: "A competitor mid-deadlift in the black 2025 championship tee, printed REICHERT with 03 in the corner tab",
         caption: "The same template printed and on the floor, set for REICHERT, 03.",
+      },
+      {
+        src: "/work/cerusbrix-championship-tees/gallery-6.jpg",
+        alt: "The 2026 championship tee artwork on black: CERUSBRIX arched in orange above a haloed bull roundel, a dumbbell, kettlebell and weight plate over an orange starburst, the name MARTINEZ and the number 09 on a ribbon banner, and CHAMPIONSHIP 2026 below",
+        caption:
+          "2026, redrawn from scratch in orange and cream. The two variable slots move to a ribbon banner, but they are still the only two.",
+      },
+      {
+        src: "/work/cerusbrix-championship-tees/gallery-7.jpg",
+        alt: "A competitor locking out a loaded barbell overhead under a large American flag, wearing the black 2026 championship tee printed MARTINEZ 09",
+        caption: "The 2026 tee on the floor, set for MARTINEZ, 09.",
       },
       {
         src: "/work/cerusbrix-championship-tees/gallery-3.jpg",
